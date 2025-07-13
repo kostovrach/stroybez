@@ -1,65 +1,201 @@
 @use "../utils/abstracts" as *;
 
 .index-hero {
-    @include block-padding($initial: rem(64));
-    &__container {
-        @include content-width();
-    }
-    &__titlebox {
+	min-height: 100lvh;
+	padding: rem(96) 0 rem(64) 0;
+	&__container {
+		@include content-width();
+	}
+	&__titlebox {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, max-content);
+		grid-template-areas:
+			"logo title"
+			"logo subtitle";
+		gap: lineScale(32, 16, 480, 1440);
+		&-logo-container {
+			grid-area: logo;
+			position: relative;
+			width: lineScale(152, 48, 480, 1440);
+		}
+		&-logo {
+			position: absolute;
+			left: 0;
+			top: 0;
+			translate: 0 -25%;
+			width: 100%;
+		}
+		&-title {
+			grid-area: title;
+			height: fit-content;
+			text-transform: uppercase;
+			font-size: lineScale(64, 24, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-black;
+		}
+		&-subtitle {
+			grid-area: subtitle;
+			max-width: 30ch;
+			font-size: lineScale(36, 18, 480, 1440);
+			line-height: 120%;
+			font-weight: $fw-m;
+		}
+	}
+	&__desc {
+		align-self: flex-end;
+		max-width: 35ch;
+		font-size: lineScale(20, 16, 480, 1440);
+		line-height: 120%;
+		&-accent {
+			color: $c-FA1943;
+		}
+	}
+	&__slider-container {
         position: relative;
-        display: grid;
-        grid-template-columns: auto 30%;
-        align-items: flex-end;
-        padding-bottom: rem(64);
-        &::before{
-            content:'';
-            position: absolute;
-            bottom: -10%;
-            left: 0;
-            width: 100%;
-            height: rem(8);
-            background-color: $c-FA1943;
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto 20%;
+        padding-top: rem(32);
+		&::before {
+			content: "";
+			position: absolute;
+            z-index: 1;
+			top: 20%;
+			left: 0;
+			width: 100%;
+			height: rem(8);
+			background-color: $c-FA1943;
+		}
+	}
+	&__slider {
+		width: 100%;
+		&-controls {
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+		}
+		&-nav {
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+		}
+		&-button {
+			position: relative;
+			inset: 0;
+			width: rem(48);
+			height: rem(48);
+			aspect-ratio: 1/1;
+			border: rem(1.5) solid $c-23293F;
+			border-radius: 50%;
+			color: inherit;
+			margin: 0;
+			padding: 0;
+			transition: all $duration;
+			@include flex-center();
+			@media (pointer: fine) {
+				&:hover {
+					color: $c-FFFFFF;
+					background-color: $c-FA1943;
+					border-color: transparent;
+					&::before {
+						scale: 1.1;
+					}
+				}
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background-color: inherit;
+                pointer-events: none;
+				transition: scale $duration;
+			}
+			&--prev {
+				rotate: -180deg;
+			}
+		}
+	}
+	&__slide {
+        &.swiper-slide-active {
+            .index-hero__slide-background {
+                scale: 1;
+            }
+            .index-hero__slide-image-container {
+                scale: 1;
+                translate: 0 0;
+            }
         }
-    }
-    &__title {
-        display: grid;
-        grid-template-rows: repeat(2, max-content);
-        grid-template-areas: "logo title"
-                             "logo subtitle";
-        gap: lineScale(32,16,480,1440);
-        &-logo-container {
-            grid-area: logo;
-            position: relative;
-            width: lineScale(152,48,480,1440);
-        }
-        &-logo {
-            position: absolute;
-            left: 0;
-            top: 0;
-            translate: 0 -25%;
-            width: 100%;
-        }
-        &-title {
-            grid-area: title;
-            height: fit-content;
-            text-transform: uppercase;
-            font-size: lineScale(64,24,480,1440);
-            line-height: 1;
-            font-weight: $fw-black;
-        }
-        &-subtitle {
-            grid-area: subtitle;
-            max-width: 30ch;
-            font-size: lineScale(40,18,480,1440);
-            line-height: 120%;
-            font-weight: $fw-m;
-        }
-    }
-    &__desc {
-        font-size: lineScale(20,16,480,1440);
-        line-height: 120%;
-        &-accent {
-            color: $c-FA1943;
-        }
-    }
+		&-wrapper {
+			display: grid;
+			grid-template-columns: 70% auto;
+			align-items: flex-end;
+			gap: rem(32);
+		}
+		&-media {
+			position: relative;
+			aspect-ratio: 16/9;
+		}
+		&-background-container {
+			position: relative;
+			width: 100%;
+			height: 100%;
+            overflow: hidden;
+		}
+		&-background {
+			position: absolute;
+			z-index: -1;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 75%;
+			object-fit: cover;
+			object-position: bottom;
+			filter: blur(2px);
+            scale: 1.05;
+            will-change: scale;
+            transition: all 1s;
+		}
+		&-image-container {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+            scale: 0.9;
+            translate: 0 10%;
+            will-change: scale;
+            transition: all 1.2s;
+		}
+		&-image {
+			width: 100%;
+			height: 110%;
+			object-fit: cover;
+		}
+		&-content {
+		}
+		&-title {
+			text-transform: uppercase;
+			font-size: lineScale(24, 18, 480, 1440);
+			line-height: 1;
+			font-weight: $fw-b;
+		}
+		&-desc {
+			font-size: lineScale(16, 14, 480, 1440);
+			opacity: 0.5;
+			margin-top: rem(16);
+		}
+		&-button {
+			margin-top: rem(64);
+			@include button-main();
+		}
+	}
 }

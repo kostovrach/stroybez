@@ -2,7 +2,7 @@
 @use "functions" as *;
 
 @mixin content-width() {
-	max-width: 1600px;
+	max-width: 1792px;
 	margin: 0 auto;
 	padding: 0 rem(64);
 	@media (max-width: 768px) {
@@ -11,7 +11,7 @@
 }
 @mixin block-padding($initial: rem(128), $break: rem(64)) {
 	padding: $initial 0;
-	@media (max-width: 768px){
+	@media (max-width: 768px) {
 		padding: $break 0;
 	}
 }
@@ -30,7 +30,7 @@
 	-webkit-text-fill-color: transparent;
 	color: transparent;
 }
-@mixin icon-hover($anim-direction: horizontal, $icon-size: auto, $duration: $duration, $timing: ease-in-out) {
+@mixin icon-hover($anim-direction: horizontal, $icon-size: auto, $duration: calc($duration * 1.5), $timing: ease-in-out) {
 	&--icon-wrapper {
 		display: inline-block;
 		overflow: hidden;
@@ -156,6 +156,39 @@
 		100% {
 			translate: 0 0;
 			opacity: 1;
+		}
+	}
+}
+@mixin button-main($gap: rem(16), $font-size: lineScale(18, 14, 480, 1440), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: $gap;
+	width: fit-content;
+	border: rem(2) solid $border-color;
+	font-size: $font-size;
+	line-height: 1;
+	padding: $padding;
+	transition: all $duration;
+	@include icon-hover();
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 0;
+		width: 0;
+		height: 100%;
+		background-color: $hover-bg;
+		transition: width $duration;
+	}
+	@media (pointer: fine){
+		&:hover{
+			color: $hover-color;
+			border-color: $hover-bg;
+			&::before{
+				width: 100%;
+			}
 		}
 	}
 }

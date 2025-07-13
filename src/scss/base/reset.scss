@@ -134,3 +134,13 @@ dialog::backdrop {
 	-o-transition-timing-function: linear !important;
 	transition-timing-function: linear !important;
 }
+.swiper-button-prev,
+.swiper-button-next {
+	&::after{
+		display: none;
+	}
+}
+
+.icon-arrow {
+	overflow: hidden;
+}
