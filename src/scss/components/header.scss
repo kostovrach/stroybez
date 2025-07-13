@@ -1,0 +1,12 @@
+@use "../utils/abstracts" as *;
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	&__container {
+		@include content-width();
+	}
+}
