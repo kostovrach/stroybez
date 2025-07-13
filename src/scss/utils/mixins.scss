@@ -9,8 +9,8 @@
 		padding: 0 rem(32);
 	}
 }
-@mixin block-padding($default: rem(128), $break: rem(64)) {
-	padding: $default 0;
+@mixin block-padding($initial: rem(128), $break: rem(64)) {
+	padding: $initial 0;
 	@media (max-width: 768px){
 		padding: $break 0;
 	}

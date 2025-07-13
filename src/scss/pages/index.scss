@@ -1,2 +1,65 @@
 @use "../utils/abstracts" as *;
 
+.index-hero {
+    @include block-padding($initial: rem(64));
+    &__container {
+        @include content-width();
+    }
+    &__titlebox {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 30%;
+        align-items: flex-end;
+        padding-bottom: rem(64);
+        &::before{
+            content:'';
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            width: 100%;
+            height: rem(8);
+            background-color: $c-FA1943;
+        }
+    }
+    &__title {
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas: "logo title"
+                             "logo subtitle";
+        gap: lineScale(32,16,480,1440);
+        &-logo-container {
+            grid-area: logo;
+            position: relative;
+            width: lineScale(152,48,480,1440);
+        }
+        &-logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            translate: 0 -25%;
+            width: 100%;
+        }
+        &-title {
+            grid-area: title;
+            height: fit-content;
+            text-transform: uppercase;
+            font-size: lineScale(64,24,480,1440);
+            line-height: 1;
+            font-weight: $fw-black;
+        }
+        &-subtitle {
+            grid-area: subtitle;
+            max-width: 30ch;
+            font-size: lineScale(40,18,480,1440);
+            line-height: 120%;
+            font-weight: $fw-m;
+        }
+    }
+    &__desc {
+        font-size: lineScale(20,16,480,1440);
+        line-height: 120%;
+        &-accent {
+            color: $c-FA1943;
+        }
+    }
+}
