@@ -30,7 +30,29 @@
 	-webkit-text-fill-color: transparent;
 	color: transparent;
 }
-@mixin icon-hover($anim-direction: horizontal, $icon-size: auto, $duration: calc($duration * 1.5), $timing: ease-in-out) {
+@mixin block-title() {
+	text-transform: uppercase;
+	font-size: lineScale(96, 24, 480, 1440);
+	line-height: 1;
+	font-weight: $fw-s;
+	&--accent {
+		color: $c-C0CED7;
+	}
+}
+@mixin block-tag() {
+	text-transform: uppercase;
+	font-size: lineScale(24,16,480,1792);
+	line-height: 1;
+	font-weight: $fw-b;
+	opacity: 0.9;
+}
+@mixin block-subtitle() {
+	max-width: 32ch;
+	font-size: lineScale(20, 14, 480, 1440);
+	line-height: 150%;
+	opacity: 0.8;
+}
+@mixin icon-hover($anim-direction: horizontal, $icon-size: auto, $duration: $duration, $timing: ease-in-out) {
 	&--icon-wrapper {
 		display: inline-block;
 		overflow: hidden;
@@ -182,32 +204,37 @@
 		background-color: $hover-bg;
 		transition: width $duration;
 	}
-	@media (pointer: fine){
-		&:hover{
+	@media (pointer: fine) {
+		&:hover {
 			color: $hover-color;
 			border-color: $hover-bg;
-			&::before{
+			&::before {
 				width: 100%;
 			}
 		}
 	}
 }
-@mixin hover-underline($bg-color: black) {
+@mixin hover-underline($color: $c-FA1943) {
 	position: relative;
 	width: fit-content;
+	line-height: 150%;
+	transition: color $duration;
 	&::after {
 		content: "";
 		display: block;
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		height: rem(1);
+		height: rem(2);
 		width: 0;
-		background-color: $bg-color;
+		background-color: $color;
 		transition: $duration;
 	}
-	&:hover::after {
-		width: 100%;
+	&:hover {
+		color: $color;
+		&::after {
+			width: 100%;
+		}
 	}
 }
 @mixin tg-hover {

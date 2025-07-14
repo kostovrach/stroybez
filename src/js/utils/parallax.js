@@ -9,7 +9,7 @@
 
   elements.forEach((el) => {
     const axis = el.dataset.axis || "y";
-    const start = parseFloat(el.dataset.start) || 200;
+    const start = parseFloat(el.dataset.start) || 100;
     const end = parseFloat(el.dataset.end) || 0;
     const duration = parseFloat(el.dataset.duration);
     const scrub = el.dataset.scrub !== "false";
