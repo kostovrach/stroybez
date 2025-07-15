@@ -41,7 +41,7 @@
 }
 @mixin block-tag() {
 	text-transform: uppercase;
-	font-size: lineScale(24,16,480,1792);
+	font-size: lineScale(24, 16, 480, 1792);
 	line-height: 1;
 	font-weight: $fw-b;
 	opacity: 0.9;
@@ -230,10 +230,41 @@
 		background-color: $color;
 		transition: $duration;
 	}
-	&:hover {
-		color: $color;
-		&::after {
-			width: 100%;
+	@media (pointer: fine) {
+		&:hover {
+			color: $color;
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+@mixin hover-underline-center($color: $c-FA1943) {
+	position: relative;
+	transition: color $duration;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: rem(4);
+		background-color: $color;
+		transition: width $duration;
+	}
+	&::before {
+		right: 50%;
+	}
+	&::after {
+		left: 50%;
+	}
+	@media (pointer: fine) {
+		&:hover {
+			color: $color;
+			&::before,
+			&::after{
+				width: 50%;
+			}
 		}
 	}
 }

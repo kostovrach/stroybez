@@ -11,6 +11,71 @@
 </head>
 
 	<body>
+		<header class="header no-logo">
+	<div class="header__container">
+		<a href="index.html" class="header__logo">
+			<picture class="header__logo-container">
+				<img class="header__logo-image" src="./assets/icons/logo/logo-main.svg" alt="Стройбезопасность" />
+			</picture>
+		</a>
+		<div class="header__controls">
+			<a class="header__controls-item header__controls-item--tel" href="contacts.html">8 800 555-55-35</a>
+			<button class="header__controls-item header__controls-item--connection" data-modal="connection">СВЯЗАТЬСЯ С НАМИ</button>
+			<button class="header__controls-item header__controls-item--burger" data-modal="menu">МЕНЮ</button>
+		</div>
+	</div>
+</header>
+<dialog id="modal-privacy" class="modal-privacy hide-scrollbar">
+	<div class="modal-privacy__close-btn" data-modal-close><i class="modal-privacy__close-btn-icon icon-cross"></i></div>
+	<div class="modal-privacy__container">
+		<div class="modal-privacy__titlebox">
+			<div class="modal-privacy__title">Политика конфиденциальности</div>
+			<time class="modal-privacy__date" datetime="2025-02-27">Последнее обновление: 27.02.25</time>
+		</div>
+		<ul class="modal-privacy__list">
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Презентация</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Наши обязательства</li>
+					<li class="modal-privacy__subitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Обязательства пользователей</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Сбор вашей информации</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Личные данные</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Использовать вашу информацию</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Предоставление услуг</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Консультации</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Использовать вашу информацию</p>
+						<p class="modal-privacy__subsubitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</p>
+						<p class="modal-privacy__subsubitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</p>
+					</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Ремонт</p>
+						<p class="modal-privacy__subsubitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</dialog>
+
+
 		<main>
 			<section class="index-hero">
 				<div class="index-hero__container">
@@ -276,6 +341,149 @@
 		</div>
 	</div>
 </div>
+				</div>
+			</section>
+			<section class="index-feedback">
+				<div class="index-feedback__container">
+					<div class="index-feedback__titlebox">
+						<h2 class="index-feedback__title">Благодарности <span class="index-feedback__title--accent">от&nbsp;клиентов</span></h2>
+						<p class="index-feedback__subtitle">Каждый шаг в этом направлении способствует не только защите работников, но и повышению общей эффективности бизнеса.</p>
+					</div>
+					<ul class="index-feedback__list">
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example2.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Благодарственное письмо за&nbsp;удачное закрытие сделки</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example2.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>ПАО «Роснефть»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example3.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">За&nbsp;выдающиеся результаты по&nbsp;проекту «ЭКО-комплекс»</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example3.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>ООО «Самолёт»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example4.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Почётная грамота от&nbsp;постоянного клиента</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example4.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>ПАО «ПИК»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example1.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Благодарность президента России за инновации в сфере безопасности</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example1.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>АО «Технождинамика»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Chambers Europe 2017</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>Группа Компаний Новый Дон</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+					</ul>
+					<a class="index-feedback__button" href="docs.html">Все награды<i class="index-feedback__button-icon icon-arrow"></i></a>
+				</div>
+			</section>
+			<section class="index-supports">
+				<div class="index-supports__container">
+					<div class="index-supports__titlebox">
+						<div class="index-supports__card" data-parallax data-start="-200" data-end="50">
+							<picture class="index-supports__card-image-container">
+								<img class="index-supports__card-image" src="./assets/img/content/support.jpg" alt="#" />
+							</picture>
+							<p class="index-supports__card-desc">Служили с честью —&nbsp;помним с любовью !</p>
+						</div>
+						<div class="index-supports__title"><span class="index-supports__title-accent">СВО</span>ИХ Не&nbsp;БРОСАЕМ</div>
+						<div class="index-supports__title--mask"><span class="index-supports__title--mask-accent">СВО</span>ИХ Не&nbsp;БРОСАЕМ</div>
+					</div>
+					<div class="index-supports__body">
+						<div class="index-supports__slider swiper">
+							<div class="index-supports__slider-wrapper swiper-wrapper">
+								<div class="index-supports__slide swiper-slide">
+									<a class="index-supports__slide-media" href="./assets/root/ConfusedTravolta.mp4" data-fancybox="index-supports">
+										<img class="index-supports__slide-image" src="./assets/img/content/support-cover.jpg" alt="#" />
+									</a>
+									<div class="index-supports__slide-button"><i class="index-supports__slide-button-icon icon-play"></i></div>
+								</div>
+								<div class="index-supports__slide swiper-slide">
+									<a class="index-supports__slide-media" href="./assets/root/ConfusedTravolta.mp4" data-fancybox="index-supports">
+										<img class="index-supports__slide-image" src="./assets/img/content/support-cover.jpg" alt="#" />
+									</a>
+									<div class="index-supports__slide-button"><i class="index-supports__slide-button-icon icon-play"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="index-supports__info">
+							<div class="index-supports__controls">
+								<div class="index-supports__controls-pagination"></div>
+								<div class="index-supports__navigation">
+									<button class="index-supports__navigation-button index-supports__navigation-button--prev swiper-button-prev"><i class="index-supports__navigation-button-icon icon-arrow"></i></button>
+									<button class="index-supports__navigation-button index-supports__navigation-button--next swiper-button-next"><i class="index-supports__navigation-button-icon icon-arrow"></i></button>
+								</div>
+							</div>
+							<div class="index-supports__desc">
+								<p class="index-supports__text">Ассоциация активно поддерживает ветеранов СВО и жителей новых регионов России, предоставляя им&nbsp;необходимые услуги и&nbsp;помощь.</p>
+								<a class="index-supports__button" href="blog.html">Проекты помощи<i class="index-supports__button-icon icon-arrow"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-news">
+				<div class="index-news__conatiner">
+					<div class="news-slider">
+    <div class="news-slider__titlebox">
+        <h2 class="news-slider__title"></h2>
+        <a class="news-slider__link" href="blog.html"><i class="news-slider__link-icon icon-arrow"></i></a>
+        <div class="news-slider__nav">
+            <button class="news-slider__nav-button news-slider__nav-button-- swiper-button-"><i class="news-slider__nav-button-icon icon-arrow"></i></button>
+            <button class="news-slider__nav-button news-slider__nav-button-- swiper-button-"><i class="news-slider__nav-button-icon icon-arrow"></i></button>
+        </div>
+    </div>
+	<div class="news-slider__slider swiper">
+		<div class="news-slider__slider-wrapper swiper-wrapper">
+            <div class="news-slider__slide">
+                <picture class="news-slider__slide-image-container">
+                    <img class="news-slider__slide-image" src="" alt="#">
+                </picture>
+                <p class="news-slider__slide-title"></p>
+                <p class="news-slider__slide-subtitle"></p>
+                <a class="news-slider__slide-link" href="article.html"><i class="news-slider__slide-link-icon icon-arrow"></i></a>
+            </div>
+        </div>
+	</div>
+</div>
+
 				</div>
 			</section>
 		</main>

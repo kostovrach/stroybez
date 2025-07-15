@@ -2,6 +2,7 @@
 <html lang="ru">
 	@@include('../components/head.html', { "title": "Ассоциация Стройбезопасность" })
 	<body>
+		@@include('../components/header.html', { 'type': 'no-logo' })
 		<main>
 			<section class="index-hero">
 				<div class="index-hero__container">
@@ -159,6 +160,127 @@
 						<h2 class="index-partners__title">Члены ассоциации</h2>
 					</div>
 					@@include('../components/partners-slider.html')
+				</div>
+			</section>
+			<section class="index-feedback">
+				<div class="index-feedback__container">
+					<div class="index-feedback__titlebox">
+						<h2 class="index-feedback__title">Благодарности <span class="index-feedback__title--accent">от&nbsp;клиентов</span></h2>
+						<p class="index-feedback__subtitle">Каждый шаг в этом направлении способствует не только защите работников, но и повышению общей эффективности бизнеса.</p>
+					</div>
+					<ul class="index-feedback__list">
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example2.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Благодарственное письмо за&nbsp;удачное закрытие сделки</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example2.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>ПАО «Роснефть»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example3.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">За&nbsp;выдающиеся результаты по&nbsp;проекту «ЭКО-комплекс»</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example3.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>ООО «Самолёт»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example4.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Почётная грамота от&nbsp;постоянного клиента</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example4.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>ПАО «ПИК»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example1.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Благодарность президента России за инновации в сфере безопасности</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example1.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>АО «Технождинамика»</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+						<li class="index-feedback__item">
+							<a class="index-feedback__item-wrapper" href="./assets/img/content/awards/example.jpg" data-fancybox="index-awards">
+								<h3 class="index-feedback__item-title">Chambers Europe 2017</h3>
+								<div class="index-feedback__item-media">
+									<picture class="index-feedback__item-image-container">
+										<img class="index-feedback__item-image" src="./assets/img/content/awards/example.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="index-feedback__item-label"><i class="index-feedback__item-label-icon icon-star"></i>Группа Компаний Новый Дон</div>
+								<time class="index-feedback__item-date">2024</time>
+							</a>
+						</li>
+					</ul>
+					<a class="index-feedback__button" href="docs.html">Все награды<i class="index-feedback__button-icon icon-arrow"></i></a>
+				</div>
+			</section>
+			<section class="index-supports">
+				<div class="index-supports__container">
+					<div class="index-supports__titlebox">
+						<div class="index-supports__card" data-parallax data-start="-200" data-end="50">
+							<picture class="index-supports__card-image-container">
+								<img class="index-supports__card-image" src="./assets/img/content/support.jpg" alt="#" />
+							</picture>
+							<p class="index-supports__card-desc">Служили с честью —&nbsp;помним с любовью !</p>
+						</div>
+						<div class="index-supports__title"><span class="index-supports__title-accent">СВО</span>ИХ Не&nbsp;БРОСАЕМ</div>
+						<div class="index-supports__title--mask"><span class="index-supports__title--mask-accent">СВО</span>ИХ Не&nbsp;БРОСАЕМ</div>
+					</div>
+					<div class="index-supports__body">
+						<div class="index-supports__slider swiper">
+							<div class="index-supports__slider-wrapper swiper-wrapper">
+								<div class="index-supports__slide swiper-slide">
+									<a class="index-supports__slide-media" href="./assets/root/ConfusedTravolta.mp4" data-fancybox="index-supports">
+										<img class="index-supports__slide-image" src="./assets/img/content/support-cover.jpg" alt="#" />
+									</a>
+									<div class="index-supports__slide-button"><i class="index-supports__slide-button-icon icon-play"></i></div>
+								</div>
+								<div class="index-supports__slide swiper-slide">
+									<a class="index-supports__slide-media" href="./assets/root/ConfusedTravolta.mp4" data-fancybox="index-supports">
+										<img class="index-supports__slide-image" src="./assets/img/content/support-cover.jpg" alt="#" />
+									</a>
+									<div class="index-supports__slide-button"><i class="index-supports__slide-button-icon icon-play"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="index-supports__info">
+							<div class="index-supports__controls">
+								<div class="index-supports__controls-pagination"></div>
+								<div class="index-supports__navigation">
+									<button class="index-supports__navigation-button index-supports__navigation-button--prev swiper-button-prev"><i class="index-supports__navigation-button-icon icon-arrow"></i></button>
+									<button class="index-supports__navigation-button index-supports__navigation-button--next swiper-button-next"><i class="index-supports__navigation-button-icon icon-arrow"></i></button>
+								</div>
+							</div>
+							<div class="index-supports__desc">
+								<p class="index-supports__text">Ассоциация активно поддерживает ветеранов СВО и жителей новых регионов России, предоставляя им&nbsp;необходимые услуги и&nbsp;помощь.</p>
+								<a class="index-supports__button" href="blog.html">Проекты помощи<i class="index-supports__button-icon icon-arrow"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-news">
+				<div class="index-news__conatiner">
+					@@include('../components/news-slider.html')
 				</div>
 			</section>
 		</main>

@@ -29,18 +29,17 @@
 	}
 
 	function duplicateSlides() {
-		// Очищаем предыдущие дубликаты
-		wrapper.querySelectorAll(".partners-slider__slide--duplicate").forEach(slide => slide.remove());
-		
+		wrapper.querySelectorAll(".partners-slider__slide--duplicate").forEach((slide) => slide.remove());
+
 		const originalSlides = Array.from(wrapper.querySelectorAll(".partners-slider__slide:not(.partners-slider__slide--duplicate)"));
-		
+
 		if (originalSlides.length === 0) return;
 
 		const slideTotalWidth = originalSlides.reduce((sum, slide) => {
-			return sum + slide.offsetWidth + 16; // включаем spaceBetween
+			return sum + slide.offsetWidth + 16;
 		}, 0);
 
-		const targetWidth = window.innerWidth * 3; // увеличиваем множитель для гарантии
+		const targetWidth = window.innerWidth * 3;
 		let currentWidth = slideTotalWidth;
 
 		while (currentWidth < targetWidth) {
@@ -81,49 +80,38 @@
 			on: {
 				init(swiperInstance) {
 					isInitialized = true;
-					// Автоплей будет управляться IntersectionObserver
-					// swiperInstance.autoplay.start();
 				},
-				slideChange(swiperInstance) {
-					// Логика для slideChange при необходимости
-					// Автоплей управляется IntersectionObserver
-				}
-			}
+				slideChange(swiperInstance) {},
+			},
 		};
 
 		swiper = new Swiper(sliderEl, clientsSliderParams);
-		
-		// Настраиваем отслеживание вьюпорта
+
 		const observer = setupViewportAutoplay(swiper, sliderEl);
 
 		return { swiper, observer };
 	}
 
-	// Инициализация
 	let observer = null;
 	const { swiper: swiperInstance, observer: intersectionObserver } = initializeSwiper();
 	observer = intersectionObserver;
 
-	// Обработка изменения размера окна
 	let resizeTimeout;
-	window.addEventListener('resize', () => {
+	window.addEventListener("resize", () => {
 		clearTimeout(resizeTimeout);
 		resizeTimeout = setTimeout(() => {
 			if (swiperInstance) {
 				duplicateSlides();
 				swiperInstance.update();
-				// Автоплей управляется IntersectionObserver, дополнительный запуск не нужен
 			}
 		}, 300);
 	});
 
-	// Обработка видимости страницы
-	document.addEventListener('visibilitychange', () => {
+	document.addEventListener("visibilitychange", () => {
 		if (!document.hidden && swiperInstance && swiperInstance.autoplay) {
-			// Проверяем видимость элемента в вьюпорте
 			const rect = sliderEl.getBoundingClientRect();
 			const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-			
+
 			if (isVisible) {
 				setTimeout(() => {
 					swiperInstance.autoplay.start();
@@ -132,8 +120,7 @@
 		}
 	});
 
-	// Очистка observer при выгрузке страницы
-	window.addEventListener('beforeunload', () => {
+	window.addEventListener("beforeunload", () => {
 		if (observer) {
 			observer.disconnect();
 		}
