@@ -139,6 +139,8 @@ dialog::backdrop {
 }
 .swiper-button-prev,
 .swiper-button-next {
+	cursor: pointer;
+	z-index: initial !important;
 	&::after{
 		display: none;
 	}

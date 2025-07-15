@@ -39,11 +39,11 @@
 		color: $c-C0CED7;
 	}
 }
-@mixin block-tag() {
+@mixin block-tag($font-size: lineScale(24, 16, 480, 1792), $font-weight: $fw-b) {
 	text-transform: uppercase;
-	font-size: lineScale(24, 16, 480, 1792);
+	font-size: $font-size;
 	line-height: 1;
-	font-weight: $fw-b;
+	font-weight: $font-weight;
 	opacity: 0.9;
 }
 @mixin block-subtitle() {
@@ -181,7 +181,8 @@
 		}
 	}
 }
-@mixin button-main($gap: rem(16), $font-size: lineScale(18, 14, 480, 1440), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
+@mixin button-main($gap: rem(16), $font-size: lineScale(18, 14, 480, 1792), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
+	cursor: pointer;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -193,10 +194,13 @@
 	padding: $padding;
 	transition: all $duration;
 	@include icon-hover();
+	> * {
+		position: relative;
+	}
 	&::before {
 		content: "";
 		position: absolute;
-		z-index: -1;
+		z-index: 0;
 		left: 0;
 		top: 0;
 		width: 0;
@@ -262,7 +266,7 @@
 		&:hover {
 			color: $color;
 			&::before,
-			&::after{
+			&::after {
 				width: 50%;
 			}
 		}

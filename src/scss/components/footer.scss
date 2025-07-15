@@ -1,20 +1,24 @@
 @use "../utils/abstracts" as *;
 
 .footer {
-	position: relative;
-	z-index: 4;
+	color: $c-FFFFFF;
 	background-color: $c-23293F;
 	&__container {
-		padding: rem(128) rem(64) rem(64) rem(64);
+	}
+	&__body {
 		@include content-width();
 	}
 	&__label {
-		padding: rem(24) 0;
+		background: url("../assets/img/service/brick.svg");
+		background-repeat: repeat;
+		background-size: rem(48);
+		@include content-width();
 		&-container {
 			width: fit-content;
 			display: flex;
 			align-items: end;
 			gap: rem(8);
+			padding: rem(24) 0;
 		}
 		&-image-container {
 			width: rem(100);
