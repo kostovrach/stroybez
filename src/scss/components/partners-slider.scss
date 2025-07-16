@@ -80,3 +80,18 @@
 		}
 	}
 }
+@media (max-width: 540px){
+	.partners-slider {
+		&__slide {
+			width: rem(132);
+			height: rem(132);
+			&-image-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				translate: -50% -50%;
+				width: rem(48);
+			}
+		}
+	}
+}

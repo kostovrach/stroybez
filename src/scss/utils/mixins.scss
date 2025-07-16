@@ -32,14 +32,14 @@
 }
 @mixin block-title() {
 	text-transform: uppercase;
-	font-size: lineScale(96, 24, 480, 1440);
+	font-size: lineScale(96, 30, 480, 1440);
 	line-height: 1;
 	font-weight: $fw-s;
 	&--accent {
 		color: $c-C0CED7;
 	}
 }
-@mixin block-tag($font-size: lineScale(24, 16, 480, 1792), $font-weight: $fw-b) {
+@mixin block-tag($font-size: lineScale(24,18,480,1792), $font-weight: $fw-b) {
 	text-transform: uppercase;
 	font-size: $font-size;
 	line-height: 1;
@@ -181,7 +181,7 @@
 		}
 	}
 }
-@mixin button-main($gap: rem(16), $font-size: lineScale(18, 14, 480, 1792), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
+@mixin button-main($gap: rem(16), $font-size: lineScale(18, 16, 480, 1792), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
 	cursor: pointer;
 	position: relative;
 	display: flex;

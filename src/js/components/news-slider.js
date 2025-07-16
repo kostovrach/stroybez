@@ -5,8 +5,6 @@
 
 	const sliderParams = {
 		spaceBetween: 16,
-		slidesPerView: 2,
-		slidesPerGroup: 2,
 		speed: 600,
 		mousewheel: {
 			forceToAxis: true,
@@ -18,6 +16,12 @@
 		keyboard: {
 			enabled: true,
 			onlyInViewport: true,
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+			},
 		},
 	};
 

@@ -33,6 +33,7 @@
 	}
 	&__logo {
 		display: block;
+		padding: rem(12) 0;
 		transition: opacity calc($duration / 2);
 		&-container {
 			max-width: rem(430);
@@ -52,12 +53,10 @@
 			font-size: lineScale(16, 14, 480, 1792);
 			line-height: 1;
 			font-weight: $fw-m;
-			padding: rem(32) 0;
-			&--tel {
-				white-space: nowrap;
-			}
+			padding: lineScale(32,20,480,1792) 0;
 			&--tel,
 			&--connection {
+				white-space: nowrap;
 				@include hover-underline-center();
 			}
 			&--burger {
@@ -84,6 +83,16 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.header {
+		&__controls-item {
+			&--tel,
+			&--connection {
+				display: none;
 			}
 		}
 	}

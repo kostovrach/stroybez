@@ -9,10 +9,11 @@
 	&__titlebox {
 		display: flex;
 		justify-content: space-between;
+		gap: rem(32);
 	}
 	&__title {
 		display: grid;
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: min-content auto;
 		grid-template-rows: repeat(2, max-content);
 		grid-template-areas:
 			"logo title"
@@ -37,7 +38,7 @@
 		&-logo-container {
 			grid-area: logo;
 			position: relative;
-			width: lineScale(152, 48, 480, 1792);
+			width: lineScale(152, 52, 480, 1792);
 			transition: all $duration;
 		}
 		&-logo {
@@ -69,7 +70,7 @@
 		align-self: flex-end;
 		max-width: 35ch;
 		font-size: lineScale(20, 16, 480, 1792);
-		line-height: 120%;
+		line-height: 150%;
 		&-accent {
 			color: $c-FA1943;
 		}
@@ -78,7 +79,7 @@
 		position: relative;
 		width: 100%;
 		display: grid;
-		grid-template-columns: auto 20%;
+		grid-template-columns: repeat(2, auto);
 		padding-top: rem(32);
 		&::before {
 			content: "";
@@ -165,7 +166,7 @@
 		}
 		&-wrapper {
 			display: grid;
-			grid-template-columns: 70% auto;
+			grid-template-columns: minmax(0, rem(900)) minmax(rem(420), 0);
 			align-items: flex-end;
 			gap: rem(32);
 		}
@@ -216,17 +217,18 @@
 		}
 		&-title {
 			text-transform: uppercase;
-			font-size: lineScale(24, 18, 480, 1792);
+			font-size: rem(24);
 			line-height: 1;
 			font-weight: $fw-b;
 		}
 		&-desc {
-			font-size: lineScale(16, 14, 480, 1792);
+			font-size: rem(16);
 			opacity: 0.5;
 			margin-top: rem(16);
 		}
 		&-button {
-			margin-top: rem(64);
+			box-sizing: border-box;
+			margin-top: 10%;
 			@include button-main();
 		}
 	}
@@ -243,7 +245,7 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		gap: rem(64);
+		gap: rem(32);
 	}
 	&__title {
 		@include block-title();
@@ -305,6 +307,7 @@
 .index-about {
 	@include block-padding();
 	&__container {
+		position: relative;
 		display: grid;
 		grid-template-columns: 20% auto 10%;
 		gap: rem(32);
@@ -345,6 +348,7 @@
 	}
 	&__cite {
 		width: 100%;
+		min-width: rem(128);
 		translate: 0 50%;
 	}
 }
@@ -371,6 +375,7 @@
 	&__titlebox {
 		display: flex;
 		align-items: flex-end;
+		gap: rem(32);
 		@include content-width();
 	}
 	&__title {
@@ -424,6 +429,8 @@
 			translate: -50% 0;
 			max-width: rem(300);
 			max-height: rem(300);
+			min-width: rem(230);
+			min-height: rem(230);
 			aspect-ratio: 1/1;
 			padding: rem(8);
 			border: rem(1) solid $c-C0CED7;
@@ -434,10 +441,12 @@
 			object-fit: cover;
 		}
 		&-title {
-			font-size: lineScale(40, 18, 480, 1792);
-			line-height: 1;
-			opacity: 0.5;
-			transition: opacity $duration;
+			font-size: lineScale(40, 14, 480, 1792);
+			line-height: 120%;
+			@media (pointer: fine) {
+				opacity: 0.5;
+				transition: opacity $duration;
+			}
 		}
 		&-label {
 			display: flex;
@@ -445,14 +454,19 @@
 			gap: rem(8);
 			font-size: lineScale(14, 12, 480, 1792);
 			line-height: 1;
-			opacity: 0.5;
-			transition: opacity $duration;
+			white-space: nowrap;
+			@media (pointer: fine) {
+				opacity: 0.5;
+				transition: opacity $duration;
+			}
 		}
 		&-date {
 			font-size: lineScale(14, 12, 480, 1792);
 			line-height: 1;
-			opacity: 0.5;
-			transition: opacity $duration;
+			@media (pointer: fine) {
+				opacity: 0.5;
+				transition: opacity $duration;
+			}
 		}
 	}
 }
@@ -463,35 +477,37 @@
 	}
 	&__titlebox {
 		position: relative;
-
 		@include flex-center();
 	}
 	&__title {
+		isolation: isolate;
+		width: 100%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		translate: -50% -50%;
 		text-transform: uppercase;
-		font-size: lineScale(96, 24, 480, 1440);
+		font-size: lineScale(96, 56, 480, 1792);
 		line-height: 1;
 		font-weight: $fw-s;
-		white-space: nowrap;
-		mix-blend-mode: multiply;
+		text-align: center;
 		&-accent {
 			color: $c-FA1943;
 		}
 		&--mask {
+			width: 100%;
 			position: absolute;
-			z-index: -1;
+			z-index: 2;
 			top: 50%;
 			left: 50%;
 			translate: -50% -50%;
 			color: $c-FFFFFF;
 			text-transform: uppercase;
-			font-size: lineScale(96, 24, 480, 1440);
+			font-size: lineScale(96, 56, 480, 1792);
 			line-height: 1;
 			font-weight: $fw-s;
-			white-space: nowrap;
+			text-align: center;
+			clip-path: ellipse(145px 145px at 50% 50%);
 		}
 	}
 	&__card {
@@ -500,6 +516,7 @@
 		padding: rem(16) rem(16) rem(32);
 		rotate: 6deg;
 		&-image-container {
+			position: relative;
 			width: 100%;
 			aspect-ratio: 1/1;
 		}
@@ -580,6 +597,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		gap: rem(32);
 	}
 	&__controls {
 		display: flex;
@@ -647,6 +665,7 @@
 		font-weight: $fw-m;
 	}
 	&__button {
+		box-sizing: border-box;
 		@include button-main();
 	}
 }
@@ -663,8 +682,7 @@
 	}
 	&__wrapper {
 		position: relative;
-		display: grid;
-		grid-template-columns: 30% auto;
+		display: flex;
 		align-items: center;
 		gap: rem(64);
 		border: rem(16) solid $c-FA1943;
@@ -682,7 +700,7 @@
 			background: url("../assets/img/service/brick.svg");
 			background-repeat: repeat;
 			background-size: rem(48);
-			clip-path: polygon(100% 2%, 0 0, 0 100%);
+			clip-path: polygon(100% 0, 0 0, 0 100%);
 		}
 	}
 	&__image-container {
@@ -690,8 +708,7 @@
 		z-index: 0;
 		width: 100%;
 		height: 100%;
-		min-height: rem(490);
-		max-width: rem(400);
+		max-width: rem(512);
 		border-radius: 0 0 rem(256) rem(256);
 		background: linear-gradient(to top, $c-C0CED7 75%, transparent 75%);
 		overflow: hidden;
@@ -713,7 +730,176 @@
 		margin-top: rem(24);
 	}
 	&__button {
+		box-sizing: border-box;
 		margin-top: rem(96);
 		@include button-main($border-color: $c-FA1943);
+	}
+}
+@media (max-width: 1240px) {
+	.index-hero {
+		&__slider-container {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.index-supports {
+		&__body {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.index-hero {
+		&__titlebox {
+			flex-direction: column;
+		}
+		&__slider {
+			&-controls {
+				position: absolute;
+				z-index: 2;
+				bottom: 20%;
+				right: 0;
+			}
+		}
+		&__slide {
+			&-wrapper {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			&-media {
+				grid-column: span 2;
+			}
+		}
+	}
+	.index-about {
+		&__container {
+			grid-template-columns: repeat(2, auto);
+		}
+		&__cite-container {
+			position: absolute;
+			z-index: -1;
+			right: 0;
+			bottom: 0;
+			translate: 0 0;
+			opacity: 0.25;
+		}
+	}
+	.index-feedback {
+		&__titlebox {
+			flex-direction: column;
+			align-items: initial;
+		}
+		&__subtitle {
+			max-width: initial;
+		}
+		&__item {
+			&-wrapper {
+				grid-template-columns: repeat(2, 1fr) minmax(rem(210), 0);
+			}
+			&-title {
+				grid-column: span 2;
+			}
+			&-image-container {
+				translate: -20% -50%;
+			}
+		}
+	}
+	.index-invite {
+		&__wrapper {
+			padding: rem(64) rem(32);
+			flex-direction: column-reverse;
+			&::before {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	.index-activity {
+		&__titlebox {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__subtitle {
+			max-width: initial;
+		}
+	}
+	.index-about {
+		&__container {
+			display: flex;
+			flex-direction: column;
+		}
+		&__cite-container {
+			position: absolute;
+			z-index: -1;
+			right: 0;
+			bottom: 0;
+			translate: 0 0;
+			opacity: 0.25;
+		}
+	}
+}
+@media (max-width: 540px) {
+	.index-hero {
+		&__desc {
+			align-self: initial;
+			max-width: initial;
+		}
+		&__slider {
+			&-container {
+				gap: rem(32);
+				&::before {
+					top: 10%;
+				}
+			}
+			&-controls {
+				position: static;
+			}
+		}
+		&__slide {
+			&-wrapper {
+				grid-template-columns: 1fr;
+			}
+			&-media {
+				grid-column: initial;
+			}
+			&-button {
+				width: 100%;
+				@include flex-center();
+			}
+		}
+	}
+	.index-feedback {
+		&__item {
+			&-label,
+			&-date {
+				grid-column: span 2;
+			}
+		}
+	}
+	.index-supports {
+		&__button {
+			width: 100%;
+			@include flex-center();
+		}
+	}
+	.index-invite {
+		padding-bottom: 0;
+		&__container {
+			max-width: initial;
+			padding: 0;
+		}
+		&__wrapper {
+			border: {
+				left: none;
+				right: none;
+				bottom: none;
+			};
+		}
+		&__button {
+			width: 100%;
+			@include flex-center();
+		}
 	}
 }
