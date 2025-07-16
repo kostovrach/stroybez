@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('../components/head.html', { "title": "Доска почета - Ассоциация Стройбезопасность" })
+	<body>
+		@@include('../components/header.html')
+		<main>
+			<section class="registry-hero">
+				<div class="registry-hero__container">
+					<div class="registry-hero__runline">
+						<span class="registry-hero__runline-inner">Доска почёта</span>
+					</div>
+					<div class="registry-hero__body">
+						<div class="registry-hero__slider swiper">
+							<div class="registry-hero__slider-wrapper swiper-wrapper">
+								<div class="registry-hero__slide swiper-slide">
+									<div class="registry-hero__slide-wrapper">
+                                        <picture class="registry-hero__slide-image-container">
+                                            <img class="registry-hero__slide-image" src="./assets/img/content/team/example.jpg" alt="#">
+                                        </picture>
+										<h2 class="registry-hero__slide-title">Александр Сергеевич Пушкин</h2>
+										<p class="registry-hero__slide-subtitle">Глава отдела безопасности</p>
+										<div class="registry-hero__slide-desc">
+											<div class="registry-hero__slide-desc-text">Этот кейс заслуживает места на&nbsp;доске почета благодаря своей инновационной стратегии и выдающимся результатам, которые вдохновили команду на новые достижения.</div>
+											<a class="registry-hero__slide-desc-button" href="article.html">далее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="registry-hero__footer">
+							<button class="registry-hero__button registry-hero__button--prev swiper-button-prev"><i class="registry-hero__button-icon icon-arrow"></i></button>
+							<div class="registry-hero__pagination swiper">
+								<div class="registry-hero__pagination-wrapper swiper-wrapper"></div>
+							</div>
+							<button class="registry-hero__button registry-hero__button--next swiper-button-next"><i class="registry-hero__button-icon icon-arrow"></i></button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include("../components/footer.html")
+	</body>
+</html>

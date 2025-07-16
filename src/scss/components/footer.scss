@@ -21,6 +21,7 @@
 		display: block;
 		&-container {
 			max-width: rem(720);
+			min-width: rem(340);
 			translate: 0 -20%;
 		}
 		&-image {
@@ -33,17 +34,17 @@
 		grid-area: links;
 		display: flex;
 		flex-direction: column;
-		gap: rem(8);
+		gap: rem(16);
 		&-item {
 			white-space: nowrap;
 			@include hover-underline($color: $c-FFFFFF);
 			&--tel {
-				font-size: lineScale(40, 18, 480, 1792);
+				font-size: lineScale(40, 24, 480, 1792);
 				line-height: 1;
 				font-weight: $fw-s;
 			}
 			&--mail {
-				font-size: lineScale(24, 14, 480, 1792);
+				font-size: rem(24);
 				line-height: 1;
 				font-weight: $fw-m;
 			}
@@ -53,6 +54,7 @@
 		grid-area: nav;
 		display: flex;
 		justify-content: space-between;
+		gap: 0 rem(32);
 		&-list {
 			display: flex;
 			flex-direction: column;
@@ -71,7 +73,8 @@
 		flex-direction: column;
 		gap: rem(32);
 		&-title {
-			font-size: lineScale(18, 14, 480, 1792);
+			max-width: 40ch;
+			font-size: lineScale(18, 16, 480, 1792);
 			line-height: 120%;
 			font-weight: $fw-m;
 		}
@@ -79,17 +82,21 @@
 			width: 100%;
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
 			gap: rem(8);
 			border-bottom: rem(2) solid rgba($c-C0CED7, 0.25);
 			transition: border-color $duration;
 			@media (pointer: fine) {
-				&:hover,
-				&:has(.footer__form-input:focus) {
+				&:hover {
 					border-color: $c-FFFFFF;
 				}
 			}
+			&:has(.footer__form-input:focus) {
+				border-color: $c-FFFFFF;
+			}
 		}
 		&-inputbox {
+			width: 100%;
 			height: fit-content;
 			position: relative;
 			display: flex;
@@ -118,6 +125,7 @@
 		}
 		&-input {
 			width: 100%;
+			min-width: rem(205);
 			color: $c-FFFFFF;
 			font-size: rem(16);
 			padding: 1.8rem 0 0.5rem 0;
@@ -135,6 +143,7 @@
 			}
 		}
 		&-button {
+			box-sizing: border-box;
 			@include button-main($gap: rem(8), $font-size: lineScale(14, 12, 480, 1792), $padding: rem(10) rem(24), $border-color: $c-FFFFFF);
 		}
 	}
@@ -143,6 +152,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: rem(16);
 		color: rgba($c-C0CED7, 0.25);
 		font-size: rem(12);
 		line-height: 1;
@@ -216,6 +227,58 @@
 			font-size: rem(12);
 			font-weight: $fw-m;
 			line-height: 1;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.footer {
+		&__body {
+			display: flex;
+			flex-direction: column;
+			gap: rem(64);
+		}
+		&__links {
+			align-self: flex-end;
+		}
+		&__nav {
+			justify-content: initial;
+			gap: 0 rem(96);
+		}
+		&__form {
+			gap: rem(0);
+		}
+	}
+}
+@media (max-width: 540px) {
+	.footer {
+		&__container {
+			padding-top: rem(64);
+		}
+		&__links {
+			align-self: initial;
+		}
+		&__nav {
+			flex-direction: column;
+			gap: rem(16);
+		}
+		&__form {
+			gap: rem(32);
+			&-body {
+				flex-direction: column;
+				gap: rem(16);
+				border: none;
+			}
+			&-inputbox {
+				border-bottom: rem(2) solid rgba($c-C0CED7, 0.25);
+				transition: border-color $duration;
+				&:has(.footer__form-input:focus) {
+					border-color: $c-FFFFFF;
+				}
+			}
+			&-button {
+				width: 100%;
+				@include flex-center();
+			}
 		}
 	}
 }

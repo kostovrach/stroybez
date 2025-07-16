@@ -2,7 +2,7 @@
 	const header = document.querySelector(".header");
     const indexLogo = document.querySelector(".index-hero__title")
 
-	if (!header) return;
+	if (!header || !indexLogo) return;
 
 	window.addEventListener("scroll", () => {
 		const isStickyMode = window.scrollY > 10 && header.classList.contains("no-logo");

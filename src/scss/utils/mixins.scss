@@ -6,7 +6,7 @@
 	margin: 0 auto;
 	padding: 0 rem(64);
 	@media (max-width: 768px) {
-		padding: 0 rem(32);
+		padding: 0 rem(16);
 	}
 }
 @mixin block-padding($initial: rem(128), $break: rem(64)) {
