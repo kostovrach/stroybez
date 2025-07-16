@@ -5,7 +5,6 @@
 
 	const sliderParams = {
 		slidesPerView: 1,
-        parallax: true,
         speed: 800,
 		allowTouchMove: false,
 		simulateTouch: false,
