@@ -53,6 +53,9 @@
 			line-height: 1;
 			font-weight: $fw-m;
 			padding: rem(32) 0;
+			&--tel {
+				white-space: nowrap;
+			}
 			&--tel,
 			&--connection {
 				@include hover-underline-center();

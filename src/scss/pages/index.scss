@@ -264,16 +264,23 @@
 		@include icon-hover(horizontal);
 	}
 	&__body {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(rem(220), rem(432)));
-		gap: rem(16);
 		margin-top: rem(32);
+		overflow-x: auto;
+		&.dragging {
+			cursor: grabbing;
+		}
+		&-container {
+			min-width: fit-content;
+			display: grid;
+			grid-template-columns: repeat(4, minmax(rem(322), rem(436)));
+			gap: rem(16);
+		}
 	}
 	&__item {
 		border: rem(1.5) solid $c-C0CED7;
 		padding: rem(32);
+		user-select: none;
 		&-image-container {
-			max-width: rem(372);
 			aspect-ratio: 1/1;
 		}
 		&-image {
@@ -583,7 +590,7 @@
 		display: flex;
 		align-items: center;
 		white-space: nowrap;
-		font-size: lineScale(16,12,480,1792);
+		font-size: lineScale(16, 12, 480, 1792);
 		line-height: 1;
 	}
 	&__navigation {
@@ -635,7 +642,7 @@
 		gap: rem(64);
 	}
 	&__text {
-		font-size: lineScale(24,16,480,1792);
+		font-size: lineScale(24, 16, 480, 1792);
 		line-height: 150%;
 		font-weight: $fw-m;
 	}
@@ -661,18 +668,18 @@
 		align-items: center;
 		gap: rem(64);
 		border: rem(16) solid $c-FA1943;
-		padding: lineScale(32,16,480,1792) lineScale(96,32,480,1792);
+		padding: lineScale(32, 16, 480, 1792) lineScale(96, 32, 480, 1792);
 		color: $c-FFFFFF;
 		background-color: $c-23293F;
-		&::before{
-			content:'';
+		&::before {
+			content: "";
 			position: absolute;
 			z-index: 0;
 			top: 0;
 			left: 0;
 			height: 100%;
 			aspect-ratio: 1/1;
-			background: url('../assets/img/service/brick.svg');
+			background: url("../assets/img/service/brick.svg");
 			background-repeat: repeat;
 			background-size: rem(48);
 			clip-path: polygon(100% 2%, 0 0, 0 100%);
@@ -695,12 +702,12 @@
 		object-fit: cover;
 	}
 	&__title {
-		font-size: lineScale(48,24,480,1792);
+		font-size: lineScale(48, 24, 480, 1792);
 		line-height: 1;
 		font-weight: $fw-b;
 	}
 	&__desc {
-		font-size: lineScale(24,14,480,1792);
+		font-size: lineScale(24, 14, 480, 1792);
 		line-height: 150%;
 		font-weight: $fw-m;
 		margin-top: rem(24);

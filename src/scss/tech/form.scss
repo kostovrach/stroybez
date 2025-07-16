@@ -7,7 +7,7 @@
 		display: flex;
 		flex-direction: column;
 		border-bottom: rem(2) solid rgba($c-C0CED7, 0.25);
-		transition: $duration;
+		transition: all $duration;
 		@media (pointer: fine) {
 			&:hover,
 			&:has(.input__input:focus) {
