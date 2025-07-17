@@ -183,11 +183,13 @@
 }
 @mixin button-main($gap: rem(16), $font-size: lineScale(18, 16, 480, 1792), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
 	cursor: pointer;
+	box-sizing: border-box;
 	position: relative;
 	display: flex;
 	align-items: center;
 	gap: $gap;
 	width: fit-content;
+	white-space: nowrap;
 	border: rem(2) solid $border-color;
 	font-size: $font-size;
 	line-height: 1;
@@ -222,7 +224,7 @@
 	position: relative;
 	width: fit-content;
 	line-height: 150%;
-	transition: color $duration;
+	transition: all $duration;
 	&::after {
 		content: "";
 		display: block;
@@ -268,6 +270,28 @@
 			&::before,
 			&::after {
 				width: 50%;
+			}
+		}
+	}
+}
+@mixin hover-fill($color: $c-FA1943, $hover-color: $c-23293F) {
+	position: relative;
+	width: fit-content;
+	transition: all $duration;
+	&::before{
+		content:'';
+		position: absolute;
+		z-index: -1;
+		width: 0;
+		height: 100%;
+		background-color: $color;
+		transition: width $duration;
+	}
+	@media (pointer: fine){
+		&:hover{
+			color: $hover-color;
+			&::before{
+				width: 100%;
 			}
 		}
 	}

@@ -1,0 +1,42 @@
+@use "../utils/abstracts" as *;
+
+.connection-block {
+	@include block-padding();
+	&__container {
+		@include content-width();
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: rem(32);
+		text-align: center;
+        background-color: rgba($c-C0CED7, 0.25);
+        border: rem(1) solid $c-C0CED7;
+		padding: rem(64) 0;
+	}
+	&__title {
+		font-size: lineScale(64, 30, 480, 1972);
+		line-height: 1;
+	}
+    &__desc {
+        max-width: 60ch;
+        font-size: rem(18);
+        font-weight: $fw-m;
+    }
+    &__button {
+        @include button-main($border-color: $c-FA1943);
+    }
+}
+@media (max-width: 768px){
+    .connection-block {
+        &__container {
+            max-width: initial;
+            padding: 0;
+        }
+        &__wrapper {
+            padding: rem(64) rem(16);
+        }
+    }
+}

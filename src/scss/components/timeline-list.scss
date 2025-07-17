@@ -12,7 +12,7 @@
 		@media (pointer: fine) {
 			&:hover {
 				background-color: rgba($c-C0CED7, 0.25);
-				.index-feedback__item {
+				.timeline-list__item {
 					&-title,
 					&-label,
 					&-date {
@@ -76,6 +76,31 @@
 			@media (pointer: fine) {
 				opacity: 0.5;
 				transition: opacity $duration;
+			}
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.timeline-list {
+		&__item {
+			&-wrapper {
+				grid-template-columns: repeat(2, 1fr) minmax(rem(210), 0);
+			}
+			&-title {
+				grid-column: span 2;
+			}
+			&-image-container {
+				translate: -20% -50%;
+			}
+		}
+	}
+}
+@media (max-width: 540px) {
+	.timeline-list {
+		&__item {
+			&-label,
+			&-date {
+				grid-column: span 2;
 			}
 		}
 	}

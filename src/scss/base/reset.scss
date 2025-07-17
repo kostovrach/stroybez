@@ -140,6 +140,7 @@ dialog::backdrop {
 .swiper-button-prev,
 .swiper-button-next {
 	cursor: pointer;
+	color: inherit !important;
 	z-index: initial !important;
 	&::after{
 		display: none;

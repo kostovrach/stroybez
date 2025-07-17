@@ -714,17 +714,6 @@
 		&__subtitle {
 			max-width: initial;
 		}
-		&__item {
-			&-wrapper {
-				grid-template-columns: repeat(2, 1fr) minmax(rem(210), 0);
-			}
-			&-title {
-				grid-column: span 2;
-			}
-			&-image-container {
-				translate: -20% -50%;
-			}
-		}
 	}
 	.index-invite {
 		&__wrapper {
@@ -789,14 +778,6 @@
 			&-button {
 				width: 100%;
 				@include flex-center();
-			}
-		}
-	}
-	.index-feedback {
-		&__item {
-			&-label,
-			&-date {
-				grid-column: span 2;
 			}
 		}
 	}

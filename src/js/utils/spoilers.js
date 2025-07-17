@@ -25,7 +25,7 @@
     e.preventDefault();
     
     const { content } = data;
-    const isActive = item.classList.contains("active");
+    const isActive = item.classList.contains("open");
     
     data.isAnimating = true;
     
@@ -37,7 +37,7 @@
   }
 
   function expandWithAnimation(item, content, data) {
-    item.classList.add("active");
+    item.classList.add("open");
     
     const startHeight = content.offsetHeight;
     const endHeight = content.scrollHeight;
@@ -72,7 +72,7 @@
       });
 
       animation.addEventListener("finish", () => {
-        item.classList.remove("active");
+        item.classList.remove("open");
         content.style.height = "";
         data.isAnimating = false;
       });
