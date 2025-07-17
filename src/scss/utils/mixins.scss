@@ -30,8 +30,9 @@
 	-webkit-text-fill-color: transparent;
 	color: transparent;
 }
-@mixin block-title() {
+@mixin block-title($color: inherit) {
 	text-transform: uppercase;
+	color: $color;
 	font-size: lineScale(96, 30, 480, 1440);
 	line-height: 1;
 	font-weight: $fw-s;

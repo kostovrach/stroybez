@@ -20,6 +20,11 @@
 	&__title {
 		@include block-tag($font-size: lineScale(40, 24, 480, 1792), $font-weight: $fw-s);
 	}
+	&__subtitle {
+		font-size: lineScale(14,12,480,1792);
+		line-height: 150%;
+		opacity: 0.6;
+	}
 	&__link {
 		display: flex;
 		align-items: center;
