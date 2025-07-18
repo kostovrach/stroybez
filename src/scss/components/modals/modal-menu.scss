@@ -92,8 +92,8 @@
 			border-radius: 0 0 100% 100%;
 			@supports (mask-image: url("")) or (-webkit-mask-image: url("")) {
 				border-radius: 0;
-				mask: url("../../../assets/img/service/shield.svg") center / contain no-repeat;
-				-webkit-mask: url("../../../assets/img/service/shield.svg") center / contain no-repeat;
+				mask: url("../assets/img/service/shield.svg") center / contain no-repeat;
+				-webkit-mask: url("../assets/img/service/shield.svg") center / contain no-repeat;
 			}
 		}
 		&-wrapper {
@@ -103,14 +103,14 @@
 			height: 100%;
 			padding: rem(128) rem(96);
 			background-color: $c-23293F;
-			background-image: url("../../../assets/img/service/brick.svg");
+			background-image: url("../assets/img/service/brick.svg");
 			background-size: rem(64);
 			background-repeat: repeat;
 			border-radius: 0 0 100% 100%;
 			@supports (mask-image: url("")) or (-webkit-mask-image: url("")) {
 				border-radius: 0;
-				mask: url("../../../assets/img/service/shield.svg") center / contain no-repeat;
-				-webkit-mask: url("../../../assets/img/service/shield.svg") center / contain no-repeat;
+				mask: url("../assets/img/service/shield.svg") center / contain no-repeat;
+				-webkit-mask: url("../assets/img/service/shield.svg") center / contain no-repeat;
 			}
 		}
 		&-desc {
