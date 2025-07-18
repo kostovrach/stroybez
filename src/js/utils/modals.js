@@ -23,7 +23,7 @@
 		setTimeout(() => {
 			modal.close();
 			handleScrollReturn();
-		}, 800);
+		}, 500);
 	}
 
 	function initModal(modalId, dataAttr, closeBtnAttr) {
@@ -60,5 +60,6 @@
 
 	window.initModal = initModal;
 
-	initModal("#modal-privacy", "privacy", "data-modal-close");
+	initModal("#modal-privacy", "privacy", "data-close-button");
+	initModal("#modal-menu", "menu", "data-close-button");
 })();

@@ -26,7 +26,7 @@
 	</div>
 </header>
 <dialog id="modal-privacy" class="modal-privacy hide-scrollbar">
-	<div class="modal-privacy__close-btn" data-modal-close><i class="modal-privacy__close-btn-icon icon-cross"></i></div>
+	<button class="modal-privacy__button" data-close-button aria-label="Закрыть окно"><i class="modal-privacy__close-btn-icon icon-cross"></i></button>
 	<div class="modal-privacy__container">
 		<div class="modal-privacy__titlebox">
 			<div class="modal-privacy__title">Политика конфиденциальности</div>
@@ -72,6 +72,50 @@
 				</ul>
 			</li>
 		</ul>
+	</div>
+</dialog>
+
+<dialog id="modal-menu" class="modal-menu">
+	<button class="modal-menu__button" data-close-button aria-label="Закрыть меню">закрыть</button>
+	<div class="modal-menu__container">
+		<picture class="modal-menu__logo-container">
+			<img class="modal-menu__logo" src="./assets/icons/logo/logo-icon.svg" alt="Логотип" />
+		</picture>
+		<nav class="modal-menu__nav">
+			<a class="modal-menu__nav-item " href="index.html">НА ГЛАВНУЮ</a>
+			<a class="modal-menu__nav-item " href="about.html">АССОЦИАЦИЯ</a>
+			<a class="modal-menu__nav-item " href="faq.html">ВОПРОСЫ</a>
+			<a class="modal-menu__nav-item " href="fields.html">ДЕЯТЕЛЬНОСТЬ</a>
+			<a class="modal-menu__nav-item current" href="docs.html">ДОКУМЕНТЫ</a>
+			<a class="modal-menu__nav-item " href="blog.html">ПРЕСС-ЦЕНТР</a>
+			<a class="modal-menu__nav-item " href="registry.html">РЕЕСТР</a>
+			<a class="modal-menu__nav-item " href="contacts.html">КОНТАКТЫ</a>
+		</nav>
+		<div class="modal-menu__info">
+			<div class="modal-menu__info-border"></div>
+			<div class="modal-menu__info-wrapper">
+				<div class="modal-menu__info-hero">
+					<ul class="modal-menu__info-desc">
+						<li class="modal-menu__desc-item">Ассоциация</li>
+						<li class="modal-menu__desc-item">Негосударственных</li>
+						<li class="modal-menu__desc-item">Структур&nbsp;Безопасности</li>
+					</ul>
+					<button class="modal-menu__info-button" data-modal="">
+						<span>Стать частью ассоциации</span>
+						<i class="modal-menu__info-button-icon icon-arrow"></i>
+					</button>
+				</div>
+				<div class="modal-menu__info-connection">
+					<a class="modal-menu__info-link modal-menu__info-link--tel" href="tel:8(846)243-90-90">8 (846) 243-90-90</a>
+					<a class="modal-menu__info-link modal-menu__info-link--mail" href="mailto:hello@stroiguard.ru">hello@stroiguard.ru</a>
+					<div class="modal-menu__info-socials">
+						<a class="modal-menu__info-socials-item modal-menu__info-socials-item--vk" href=""><i class="modal-menu__info-socials-item-icon icon-vk"></i></a>
+						<a class="modal-menu__info-socials-item modal-menu__info-socials-item--telegram" href=""><i class="modal-menu__info-socials-item-icon icon-telegram"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-menu__copyright">2025 &copy; Стройбезопасность. Все права защищены</div>
 	</div>
 </dialog>
 
@@ -223,13 +267,13 @@
 			<nav class="footer__nav">
 				<div class="footer__nav-list">
 					<a class="footer__nav-item" href="index.html">Главная</a>
-					<a class="footer__nav-item" href="">Деятельность</a>
+					<a class="footer__nav-item" href="fields.html">Деятельность</a>
 					<a class="footer__nav-item" href="about.html">Об ассоциации</a>
 					<a class="footer__nav-item" href="registry.html">Реестр участников</a>
 				</div>
 				<div class="footer__nav-list">
 					<a class="footer__nav-item" href="docs.html">Документы</a>
-					<a class="footer__nav-item" href="">Помощь</a>
+					<a class="footer__nav-item" href="faq.html">Помощь</a>
 					<a class="footer__nav-item" href="blog.html">Пресс-центр</a>
 					<a class="footer__nav-item" href="contacts.html">Контакты</a>
 				</div>

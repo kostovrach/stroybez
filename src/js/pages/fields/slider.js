@@ -1,11 +1,8 @@
 (function () {
-	if (typeof Swiper === 'undefined') return;
-
 	const sliderEl = document.querySelector(".fields-slider__slider");
-	if (!sliderEl) return;
-
 	const sliderPagination = document.querySelector(".fields-slider__pagination");
-	if (!sliderPagination) return;
+
+	if (!sliderEl || !sliderPagination) return;
 
 	const state = {
 		isInViewport: false,

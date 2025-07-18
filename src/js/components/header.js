@@ -5,7 +5,7 @@
 	if (!header || !indexLogo) return;
 
 	window.addEventListener("scroll", () => {
-		const isStickyMode = window.scrollY > 10 && header.classList.contains("no-logo");
+		const isStickyMode = window.scrollY > 10 && header.classList.contains("no-logo") || document.body.classList.contains("lock");
 
 		header.classList.toggle("scroll", isStickyMode);
 		indexLogo.classList.toggle("scroll", isStickyMode);

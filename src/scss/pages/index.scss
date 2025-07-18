@@ -149,6 +149,7 @@
 		}
 		&-pagination {
 			position: static;
+			z-index: initial;
 			width: fit-content;
 			color: inherit;
 			font-size: lineScale(14, 12, 480, 1792);

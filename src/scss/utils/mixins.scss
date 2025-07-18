@@ -246,8 +246,8 @@
 		}
 	}
 }
-@mixin hover-underline-center($color: $c-FA1943) {
-	position: relative;
+@mixin hover-underline-center($color: $c-FA1943, $position: relative) {
+	position: $position;
 	transition: color $duration;
 	&::before,
 	&::after {
