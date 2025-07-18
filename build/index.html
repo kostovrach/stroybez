@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
+	<title>Ассоциация Стройбезопасность</title>
+</head>
+
+	<body>
+		<header class="header no-logo">
+	<div class="header__container">
+		<a href="index.html" class="header__logo">
+			<picture class="header__logo-container">
+				<img class="header__logo-image" src="./assets/icons/logo/logo-main.svg" alt="Стройбезопасность" />
+			</picture>
+		</a>
+		<div class="header__controls">
+			<a class="header__controls-item header__controls-item--tel" href="contacts.html">8 800 555-55-35</a>
+			<button class="header__controls-item header__controls-item--connection" data-modal="connection">СВЯЗАТЬСЯ С НАМИ</button>
+			<button class="header__controls-item header__controls-item--burger" data-modal="menu">МЕНЮ</button>
+		</div>
+	</div>
+</header>
+<dialog id="modal-privacy" class="modal-privacy hide-scrollbar">
+	<button class="modal-privacy__button" data-close-button aria-label="Закрыть окно"><i class="modal-privacy__close-btn-icon icon-cross"></i></button>
+	<div class="modal-privacy__container">
+		<div class="modal-privacy__titlebox">
+			<div class="modal-privacy__title">Политика конфиденциальности</div>
+			<time class="modal-privacy__date" datetime="2025-02-27">Последнее обновление: 27.02.25</time>
+		</div>
+		<ul class="modal-privacy__list">
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Презентация</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Наши обязательства</li>
+					<li class="modal-privacy__subitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Обязательства пользователей</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Сбор вашей информации</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Личные данные</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Использовать вашу информацию</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Предоставление услуг</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Консультации</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Использовать вашу информацию</p>
+						<p class="modal-privacy__subsubitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</p>
+						<p class="modal-privacy__subsubitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</p>
+					</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Ремонт</p>
+						<p class="modal-privacy__subsubitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</dialog>
+
+<dialog id="modal-menu" class="modal-menu">
+	<button class="modal-menu__button" data-close-button aria-label="Закрыть меню">закрыть</button>
+	<div class="modal-menu__container">
+		<picture class="modal-menu__logo-container">
+			<img class="modal-menu__logo" src="./assets/icons/logo/logo-icon.svg" alt="Логотип" />
+		</picture>
+		<nav class="modal-menu__nav">
+			<a class="modal-menu__nav-item current" href="index.html">НА ГЛАВНУЮ</a>
+			<a class="modal-menu__nav-item " href="about.html">АССОЦИАЦИЯ</a>
+			<a class="modal-menu__nav-item " href="faq.html">ВОПРОСЫ</a>
+			<a class="modal-menu__nav-item " href="fields.html">ДЕЯТЕЛЬНОСТЬ</a>
+			<a class="modal-menu__nav-item " href="docs.html">ДОКУМЕНТЫ</a>
+			<a class="modal-menu__nav-item " href="blog.html">ПРЕСС-ЦЕНТР</a>
+			<a class="modal-menu__nav-item " href="registry.html">РЕЕСТР</a>
+			<a class="modal-menu__nav-item " href="contacts.html">КОНТАКТЫ</a>
+		</nav>
+		<div class="modal-menu__info">
+			<div class="modal-menu__info-border"></div>
+			<div class="modal-menu__info-wrapper">
+				<div class="modal-menu__info-hero">
+					<ul class="modal-menu__info-desc">
+						<li class="modal-menu__desc-item">Ассоциация</li>
+						<li class="modal-menu__desc-item">Негосударственных</li>
+						<li class="modal-menu__desc-item">Структур&nbsp;Безопасности</li>
+					</ul>
+					<button class="modal-menu__info-button" data-modal="">
+						<span>Стать частью ассоциации</span>
+						<i class="modal-menu__info-button-icon icon-arrow"></i>
+					</button>
+				</div>
+				<div class="modal-menu__info-connection">
+					<a class="modal-menu__info-link modal-menu__info-link--tel" href="tel:8(846)243-90-90">8 (846) 243-90-90</a>
+					<a class="modal-menu__info-link modal-menu__info-link--mail" href="mailto:hello@stroiguard.ru">hello@stroiguard.ru</a>
+					<div class="modal-menu__info-socials">
+						<a class="modal-menu__info-socials-item modal-menu__info-socials-item--vk" href=""><i class="modal-menu__info-socials-item-icon icon-vk"></i></a>
+						<a class="modal-menu__info-socials-item modal-menu__info-socials-item--telegram" href=""><i class="modal-menu__info-socials-item-icon icon-telegram"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-menu__copyright">2025 &copy; Стройбезопасность. Все права защищены</div>
+	</div>
+</dialog>
+
+
+		<main>
+			<section class="index-hero">
+				<div class="index-hero__container">
+					<div class="index-hero__titlebox">
+						<div class="index-hero__title">
+							<picture class="index-hero__title-logo-container">
+								<img class="index-hero__title-logo" src="./assets/icons/logo/logo-icon.svg" alt="Логотип" />
+							</picture>
+							<h1 class="index-hero__title-title">стройбезопасность</h1>
+							<p class="index-hero__title-subtitle">Ассоциация негосударственных структур&nbsp;безопасности в&nbsp;сфере строительства</p>
+						</div>
+						<p class="index-hero__desc"><span class="index-hero__desc-accent">Стройбезопасность</span> объединяет компании из&nbsp;сферы строительной безопасности 5&nbsp;направлений: строительная, пожарная, экологическая и&nbsp;антитеррористическая</p>
+					</div>
+					<div class="index-hero__slider-container">
+						<div class="index-hero__slider swiper">
+							<div class="index-hero__slider-wrapper swiper-wrapper">
+								<div class="index-hero__slide swiper-slide">
+									<div class="index-hero__slide-wrapper">
+										<div class="index-hero__slide-media">
+											<picture class="index-hero__slide-background-container">
+												<img class="index-hero__slide-background" src="./assets/img/content/backgrounds/building.jpg" alt="#" />
+											</picture>
+											<picture class="index-hero__slide-image-container">
+												<img class="index-hero__slide-image" src="./assets/img/content/fields/building.png" alt="#" />
+											</picture>
+										</div>
+										<div class="index-hero__slide-content">
+											<h3 class="index-hero__slide-title">Системы строительной безопасности</h3>
+											<p class="index-hero__slide-desc">Видеонаблюдение, контроль доступа, сигнализация и другие меры</p>
+											<a class="index-hero__slide-button" href="fields.html#control">
+												<span>О направлении</span>
+												<i class="index-hero__slide-button-icon icon-arrow"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="index-hero__slide swiper-slide">
+									<div class="index-hero__slide-wrapper">
+										<div class="index-hero__slide-media">
+											<picture class="index-hero__slide-background-container">
+												<img class="index-hero__slide-background" src="./assets/img/content/backgrounds/workshop.jpg" alt="#" />
+											</picture>
+											<picture class="index-hero__slide-image-container">
+												<img class="index-hero__slide-image" src="./assets/img/content/fields/workshop.png" alt="#" />
+											</picture>
+										</div>
+										<div class="index-hero__slide-content">
+											<h3 class="index-hero__slide-title">Противопожарная безопасность</h3>
+											<p class="index-hero__slide-desc">Проверка наличия огнетушителей, регулярные тренировки, установка сигнализации, создание эвакуационных планов</p>
+											<a class="index-hero__slide-button" href="fields.html#laws">
+												<span>О направлении</span>
+												<i class="index-hero__slide-button-icon icon-arrow"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="index-hero__slide swiper-slide">
+									<div class="index-hero__slide-wrapper">
+										<div class="index-hero__slide-media">
+											<picture class="index-hero__slide-background-container">
+												<img class="index-hero__slide-background" src="./assets/img/content/backgrounds/ecology.jpg" alt="#" />
+											</picture>
+											<picture class="index-hero__slide-image-container">
+												<img class="index-hero__slide-image" src="./assets/img/content/fields/ecology.png" alt="#" />
+											</picture>
+										</div>
+										<div class="index-hero__slide-content">
+											<h3 class="index-hero__slide-title">Контроль экологической безопасности</h3>
+											<p class="index-hero__slide-desc">Мониторинг качества воздуха, управление отходами, оценку воздействия на окружающую среду, соблюдение экологических норм и&nbsp;стандартов</p>
+											<a class="index-hero__slide-button" href="fields.html#corruption">
+												<span>О направлении</span>
+												<i class="index-hero__slide-button-icon icon-arrow"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="index-hero__slider-controls">
+							<div class="index-hero__slider-controls-wrapper">
+								<div class="index-hero__slider-pagination swiper-pagination"></div>
+								<div class="index-hero__slider-nav">
+									<div class="index-hero__slider-button index-hero__slider-button--prev swiper-button-prev"><i class="index-hero__slider-button-icon icon-arrow"></i></div>
+									<div class="index-hero__slider-button index-hero__slider-button--next swiper-button-next"><i class="index-hero__slider-button-icon icon-arrow"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-activity">
+				<div class="index-activity__container">
+					<div class="index-activity__titlebox">
+						<h2 class="index-activity__title">Деятельность <span class="index-activity__title--accent">ассоциации</span></h2>
+						<p class="index-activity__subtitle">Предоставляем обучение, сертификацию и&nbsp;консультации для профессионалов в&nbsp;области строительства</p>
+					</div>
+					<div class="index-activity__body drag-to-scroll hide-scrollbar">
+						<ul class="index-activity__body-container">
+							<li class="index-activity__item">
+								<picture class="index-activity__item-image-container" data-parallax>
+									<img class="index-activity__item-image" src="./assets/icons/glass/camera.png" alt="Организация контроля" />
+								</picture>
+								<h3 class="index-activity__item-title">Организация контроля</h3>
+								<p class="index-activity__item-desc">Контроль на стройке осуществляется через регулярные проверки качества выполненных работ, а&nbsp;также тщательное соблюдение установленных сроков</p>
+							</li>
+							<li class="index-activity__item">
+								<picture class="index-activity__item-image-container" data-parallax>
+									<img class="index-activity__item-image" src="./assets/icons/glass/shield.png" alt="Нормативно-правовое сопровождение" />
+								</picture>
+								<h3 class="index-activity__item-title">Нормативно-правовое сопровождение</h3>
+								<p class="index-activity__item-desc">Нормативно-правовое сопровождение на стройке включает в себя соблюдение всех необходимых стандартов и правил для обеспечения безопасности и качества строительства</p>
+							</li>
+							<li class="index-activity__item">
+								<picture class="index-activity__item-image-container" data-parallax>
+									<img class="index-activity__item-image" src="./assets/icons/glass/alarm.png" alt="Противодействие коррупции" />
+								</picture>
+								<h3 class="index-activity__item-title">Противодействие коррупции</h3>
+								<p class="index-activity__item-desc">Противодействие коррупции в строительстве включает в себя внедрение прозрачных тендерных процедур и строгий контроль за расходами</p>
+							</li>
+							<li class="index-activity__item">
+								<picture class="index-activity__item-image-container" data-parallax>
+									<img class="index-activity__item-image" src="./assets/icons/glass/heart.png" alt="Добрые дела " />
+								</picture>
+								<h3 class="index-activity__item-title">Добрые дела</h3>
+								<p class="index-activity__item-desc">Ассоциация активно занимается добрыми делами, предоставляя бесплатные услуги тем, кто в них нуждается, и тем самым внося значимый вклад в&nbsp;общество</p>
+							</li>
+						</ul>
+					</div>
+					<a class="index-activity__button" href="fields.html">
+						<span>Больше про деятельность</span>
+						<i class="index-activity__button-icon icon-arrow"></i>
+					</a>
+				</div>
+			</section>
+			<section class="index-about">
+				<div class="index-about__container">
+					<h2 class="index-about__tag">ПРИНЦИПЫ</h2>
+					<div class="index-about__body">
+						<p class="index-about__title">Мы твердо верим, что безопасность — это не просто стандарт, а&nbsp;основа для устойчивого развития в&nbsp;строительной отрасли.</p>
+						<p class="index-about__desc">Для нас важно, чтобы каждая компания в этой сфере осознавала свою ответственность и&nbsp;стремилась к созданию безопасных условий труда. Каждый шаг в этом направлении способствует не только защите работников, но и повышению общей эффективности бизнеса.</p>
+					</div>
+					<div class="index-about__cite-container">
+						<div class="index-about__cite">
+							<svg viewBox="0 0 178 133" preserveAspectRatio="xMidYMid meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M37.3391 0.0287476C50.2969 0.373688 59.6743 5.03027 65.4713 13.9985C71.2682 22.9667 74.1667 33.3147 74.1667 45.0424C74.1667 58.4947 71.4387 71.2572 65.9827 83.3298C60.1858 95.4024 52.8544 105.75 43.9885 114.374C34.7816 123.342 25.0632 129.551 14.8333 133L0 111.787C4.43295 108.682 9.20691 104.543 14.3219 99.3691C19.0958 94.5401 23.5287 89.3661 27.6207 83.8472C31.3717 78.3283 33.9291 72.8094 35.2931 67.2905C28.8142 66.9455 23.1877 65.2209 18.4138 62.1165C13.6398 59.357 9.88889 55.5628 7.1609 50.7337C4.43295 46.2496 3.06897 40.7307 3.06897 34.177C3.06897 22.7942 6.47893 14.171 13.2989 8.30713C20.1188 2.44328 28.1322 -0.316177 37.3391 0.0287476ZM140.661 0.0287476C153.96 0.373688 163.508 5.03027 169.305 13.9985C175.102 22.9667 178 33.3147 178 45.0424C178 58.4947 175.272 71.2572 169.816 83.3298C164.019 95.4024 156.688 105.75 147.822 114.374C138.615 123.342 128.897 129.551 118.667 133L103.833 111.787C108.266 108.682 113.04 104.543 118.155 99.3691C122.929 94.5401 127.192 89.3661 130.943 83.8472C134.693 78.3283 137.421 72.8094 139.126 67.2905C132.648 66.9455 127.021 65.2209 122.247 62.1165C117.473 59.357 113.722 55.5628 110.994 50.7337C108.266 46.2496 106.902 40.7307 106.902 34.177C106.902 22.7942 110.312 14.171 117.132 8.30713C123.952 2.78821 131.795 0.0287476 140.661 0.0287476Z"
+									fill="#C0CED7"
+								/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-partners">
+				<div class="index-partners__container">
+					<div class="index-partners__titlebox">
+						<h2 class="index-partners__title">Члены ассоциации</h2>
+					</div>
+					<div class="partners-slider swiper">
+	<div class="partners-slider__wrapper swiper-wrapper">
+		<div class="partners-slider__slide swiper-slide">
+			<a class="partners-slider__slide-wrapper" href="#">
+				<div class="partners-slider__slide-image-container">
+					<svg class="partners-slider__slide-image" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" fill="#23293F" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M100 28.125C100 30.2083 99.7559 32.3079 99.2676 34.4238C98.7793 36.5397 98.1283 38.6556 97.3145 40.7715C96.5006 42.8874 95.5892 44.9056 94.5801 46.8262C93.571 48.7467 92.5293 50.6185 91.4551 52.4414C90.446 54.1341 89.4206 55.6966 88.3789 57.1289C87.3372 58.5612 86.2956 59.9447 85.2539 61.2793C84.2122 62.6139 83.252 63.9811 82.373 65.3809C81.4941 66.7806 80.6966 68.2129 79.9805 69.6777C79.2643 71.1426 78.7272 72.7865 78.3691 74.6094C78.0111 76.4323 77.7995 78.418 77.7344 80.5664C77.7344 81.7383 77.7832 82.8939 77.8809 84.0332C77.9785 85.1725 78.1576 86.3281 78.418 87.5H66.4551C65.5111 86.2956 64.3717 84.9935 63.0371 83.5938C61.7025 82.194 60.2376 80.8919 58.6426 79.6875C57.0475 78.4831 55.4362 77.4902 53.8086 76.709C52.181 75.9277 50.5371 75.5208 48.877 75.4883C47.2819 75.4883 45.8822 75.8626 44.6777 76.6113C43.4733 77.36 42.4316 78.3366 41.5527 79.541C40.6738 80.7454 39.9414 82.0312 39.3555 83.3984C38.7695 84.7656 38.265 86.1328 37.8418 87.5H28.6621C28.5319 86.5234 28.304 85.4492 27.9785 84.2773C27.653 83.1055 27.1647 81.9987 26.5137 80.957C25.8626 79.9154 25.1139 79.0527 24.2676 78.3691C23.4212 77.6855 22.3633 77.3275 21.0938 77.2949C19.8568 77.2949 18.7826 77.6367 17.8711 78.3203C16.9596 79.0039 16.1458 79.8665 15.4297 80.9082C14.7135 81.9499 14.1602 83.0566 13.7695 84.2285C13.3789 85.4004 13.0534 86.4909 12.793 87.5H0.830078C0.504557 85.7096 0.292969 83.903 0.195312 82.0801C0.0976562 80.2572 0.0325521 78.418 0 76.5625C0 74.2513 0.113932 71.8913 0.341797 69.4824C0.569661 67.0736 0.960286 64.7135 1.51367 62.4023C2.06706 60.0911 2.79948 57.8613 3.71094 55.7129C4.6224 53.5645 5.76172 51.5788 7.12891 49.7559C8.49609 47.9329 10.1074 46.2891 11.9629 44.8242C13.8184 43.3594 15.9668 42.2038 18.4082 41.3574C19.1243 43.0176 19.8893 44.6452 20.7031 46.2402C21.5169 47.8353 22.4284 49.3815 23.4375 50.8789C24.2513 52.1484 25.293 53.1738 26.5625 53.9551C27.832 54.7363 29.248 55.1432 30.8105 55.1758C32.2428 55.1758 33.61 54.8503 34.9121 54.1992C36.2142 53.5482 37.4349 52.7344 38.5742 51.7578C39.7135 50.7812 40.7715 49.707 41.748 48.5352C42.7246 47.3633 43.571 46.224 44.2871 45.1172C43.5384 45.931 42.6595 46.7936 41.6504 47.7051C40.6413 48.6165 39.5345 49.4466 38.3301 50.1953C37.1257 50.944 35.9049 51.5788 34.668 52.0996C33.431 52.6204 32.2591 52.8809 31.1523 52.8809C29.8828 52.8809 28.8249 52.5879 27.9785 52.002C27.1322 51.416 26.3672 50.6022 25.6836 49.5605C25.3906 49.0723 25 48.4538 24.5117 47.7051C24.0234 46.9564 23.5189 46.11 22.998 45.166C22.4772 44.222 21.9401 43.2617 21.3867 42.2852C20.8333 41.3086 20.3451 40.3646 19.9219 39.4531C19.4987 38.5417 19.1569 37.7116 18.8965 36.9629C18.6361 36.2142 18.4896 35.5957 18.457 35.1074C18.457 34.0007 18.9128 33.0078 19.8242 32.1289C20.7357 31.25 21.9238 30.485 23.3887 29.834C24.8535 29.1829 26.4811 28.6133 28.2715 28.125C30.0618 27.6367 31.8197 27.2461 33.5449 26.9531C35.2702 26.6602 36.8652 26.4486 38.3301 26.3184C39.7949 26.1882 40.9342 26.1068 41.748 26.0742C46.2728 26.0742 50.472 26.7415 54.3457 28.0762C58.2194 29.4108 62.0117 31.3477 65.7227 33.8867C67.3828 35.026 69.1081 35.9538 70.8984 36.6699C72.6888 37.3861 74.6094 37.7604 76.6602 37.793C78.418 37.793 80.1595 37.4349 81.8848 36.7188C83.61 36.0026 85.1725 35.0423 86.5723 33.8379C87.972 32.6335 89.0951 31.2012 89.9414 29.541C90.7878 27.8809 91.2272 26.123 91.2598 24.2676C91.2598 23.0957 91.0319 22.0052 90.5762 20.9961C90.1204 19.987 89.502 19.1081 88.7207 18.3594C87.9395 17.6107 87.0443 17.0085 86.0352 16.5527C85.026 16.097 83.9355 15.8691 82.7637 15.8691C82.015 15.8691 81.3477 15.9505 80.7617 16.1133C80.1758 16.276 79.6224 16.4714 79.1016 16.6992C78.5807 16.9271 78.1087 17.1224 77.6855 17.2852C77.2624 17.4479 76.888 17.5456 76.5625 17.5781C76.0417 17.5781 75.6348 17.3665 75.3418 16.9434C75.2441 16.8132 75.0977 16.569 74.9023 16.2109C74.707 15.8529 74.4954 15.446 74.2676 14.9902C74.0397 14.5345 73.8444 14.1113 73.6816 13.7207C73.5189 13.3301 73.4375 13.0371 73.4375 12.8418C73.4375 12.0605 73.7956 11.3932 74.5117 10.8398C75.2279 10.2865 76.0579 9.83073 77.002 9.47266C77.946 9.11458 78.9225 8.85417 79.9316 8.69141C80.9408 8.52865 81.722 8.44727 82.2754 8.44727C85.0423 8.44727 87.5163 8.9681 89.6973 10.0098C91.8783 11.0514 93.75 12.4837 95.3125 14.3066C96.875 16.1296 98.0306 18.2292 98.7793 20.6055C99.528 22.9818 99.9349 25.4883 100 28.125ZM61.7676 46.582C61.7676 47.526 61.9466 48.3724 62.3047 49.1211C62.6628 49.8698 63.1348 50.5371 63.7207 51.123C64.3066 51.709 65.0228 52.1322 65.8691 52.3926C66.7155 52.653 67.5944 52.7995 68.5059 52.832C69.1244 52.832 69.7917 52.7181 70.5078 52.4902C71.224 52.2624 71.8913 51.9531 72.5098 51.5625C73.1283 51.1719 73.6816 50.6836 74.1699 50.0977C74.6582 49.5117 74.9674 48.9095 75.0977 48.291C74.5443 48.0957 73.9746 47.9004 73.3887 47.7051C72.8027 47.5098 72.2331 47.3307 71.6797 47.168C71.7122 47.3307 71.7448 47.4609 71.7773 47.5586C71.8099 47.6562 71.8262 47.7865 71.8262 47.9492C71.8262 48.8932 71.5006 49.6582 70.8496 50.2441C70.1986 50.8301 69.401 51.1393 68.457 51.1719C67.5781 51.1719 66.8131 50.8789 66.1621 50.293C65.5111 49.707 65.1855 48.9583 65.1855 48.0469C65.1855 47.526 65.2995 47.054 65.5273 46.6309C65.7552 46.2077 66.097 45.8333 66.5527 45.5078L62.1582 44.0918C61.9954 44.4824 61.8978 44.8893 61.8652 45.3125C61.8327 45.7357 61.8001 46.1589 61.7676 46.582Z"
+						/>
+					</svg>
+				</div>
+
+				<div class="partners-slider__slide-title">ЧОО «Слон»</div>
+				<ul class="partners-slider__slide-desc">
+					<li class="partners-slider__slide-desc-item">Скидка 15% на курсы повышения квалификации</li>
+				</ul>
+			</a>
+		</div>
+		<div class="partners-slider__slide swiper-slide">
+			<a class="partners-slider__slide-wrapper" href="#">
+				<div class="partners-slider__slide-image-container">
+					<svg class="partners-slider__slide-image" preserveAspectRatio="xMidYMid meet" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_9787_1542)">
+							<path
+								d="M136.26 56.5825C135.88 56.2636 132.442 53.651 125.062 53.651C123.121 53.6623 121.185 53.8325 119.271 54.1601C117.873 44.4063 109.791 39.6902 109.472 39.4223L107.5 38.2754L106.227 40.1243C104.622 42.6345 103.44 45.3909 102.728 48.2837C101.388 53.8305 102.218 59.0558 105.019 63.5173C101.645 65.4305 96.1759 65.8754 95.0291 65.929H4.67531C4.11226 65.9286 3.5547 66.0396 3.03475 66.2557C2.51479 66.4717 2.04271 66.7885 1.64569 67.1877C1.24868 67.587 0.934576 68.0608 0.721474 68.582C0.508371 69.1032 0.40048 69.6613 0.404014 70.2244C0.282945 78.1569 1.62273 86.0439 4.35644 93.4914C7.4755 101.651 12.1193 107.72 18.0894 111.402C24.8474 115.545 35.8552 117.903 48.2618 117.903C53.8748 117.903 59.4762 117.391 64.996 116.373C72.6915 114.977 80.0936 112.283 86.8857 108.406C92.4771 105.157 97.5057 101.024 101.776 96.1683C108.966 88.0733 113.229 79.0189 116.348 70.98H117.621C125.448 70.98 130.285 67.8556 132.956 65.1787C134.73 63.4981 136.119 61.4543 137.029 59.1871L137.603 57.5311L136.26 56.5825Z"
+								fill="#23293F"
+							/>
+							<path
+								d="M13.0718 63.3377H25.1596C25.4438 63.3377 25.7165 63.2248 25.9175 63.0238C26.1185 62.8228 26.2314 62.5501 26.2314 62.2659V51.4188C26.2314 51.1345 26.1185 50.8619 25.9175 50.6609C25.7165 50.4599 25.4438 50.347 25.1596 50.347H13.0718C12.7876 50.347 12.5149 50.4599 12.3139 50.6609C12.1129 50.8619 12 51.1345 12 51.4188V62.2551C12.0106 62.536 12.1269 62.8025 12.3257 63.0013C12.5245 63.2 12.791 63.3164 13.0718 63.327M29.7417 63.3377H41.8321C42.1164 63.3377 42.389 63.2248 42.59 63.0238C42.791 62.8228 42.9039 62.5501 42.9039 62.2659V51.4188C42.9039 51.1345 42.791 50.8619 42.59 50.6609C42.389 50.4599 42.1164 50.347 41.8321 50.347H29.7417C29.4574 50.347 29.1848 50.4599 28.9838 50.6609C28.7828 50.8619 28.6698 51.1345 28.6698 51.4188V62.2551C28.6805 62.536 28.7968 62.8025 28.9955 63.0013C29.1943 63.2 29.4608 63.3164 29.7417 63.327M46.7304 63.3377H58.8155C59.0997 63.3377 59.3724 63.2248 59.5734 63.0238C59.7744 62.8228 59.8873 62.5501 59.8873 62.2659V51.4188C59.8873 51.1345 59.7744 50.8619 59.5734 50.6609C59.3724 50.4599 59.0997 50.347 58.8155 50.347H46.7304C46.4461 50.347 46.1735 50.4599 45.9725 50.6609C45.7715 50.8619 45.6586 51.1345 45.6586 51.4188V62.2551C45.6537 62.3972 45.6781 62.5388 45.7303 62.671C45.7824 62.8032 45.8612 62.9233 45.9617 63.0239C46.0622 63.1244 46.1823 63.2032 46.3146 63.2553C46.4468 63.3074 46.5883 63.3318 46.7304 63.327M63.4673 63.3377H75.5577C75.8419 63.3377 76.1146 63.2248 76.3156 63.0238C76.5166 62.8228 76.6295 62.5501 76.6295 62.2659V51.4188C76.6295 51.1345 76.5166 50.8619 76.3156 50.6609C76.1146 50.4599 75.8419 50.347 75.5577 50.347H63.4673C63.183 50.347 62.9104 50.4599 62.7094 50.6609C62.5083 50.8619 62.3954 51.1345 62.3954 51.4188V62.2551C62.3954 62.5394 62.5083 62.812 62.7094 63.0131C62.9104 63.2141 63.183 63.327 63.4673 63.327M29.7417 47.8496H41.8321C42.113 47.839 42.3795 47.7226 42.5782 47.5239C42.777 47.3251 42.8933 47.0586 42.9039 46.7777V35.9307C42.9039 35.6464 42.791 35.3738 42.59 35.1728C42.389 34.9717 42.1164 34.8588 41.8321 34.8588H29.7417C29.4574 34.8588 29.1848 34.9717 28.9838 35.1728C28.7828 35.3738 28.6698 35.6464 28.6698 35.9307V46.767C28.6908 47.0443 28.8105 47.3049 29.0072 47.5015C29.2038 47.6982 29.4644 47.8179 29.7417 47.8388M46.7304 47.8496H58.8155C59.0963 47.839 59.3628 47.7226 59.5616 47.5239C59.7604 47.3251 59.8767 47.0586 59.8873 46.7777V35.9307C59.8873 35.6464 59.7744 35.3738 59.5734 35.1728C59.3724 34.9717 59.0997 34.8588 58.8155 34.8588H46.7304C46.4461 34.8588 46.1735 34.9717 45.9725 35.1728C45.7715 35.3738 45.6586 35.6464 45.6586 35.9307V46.767C45.6586 47.0513 45.7715 47.3239 45.9725 47.5249C46.1735 47.7259 46.4461 47.8388 46.7304 47.8388M63.4673 47.8496H75.5577C75.8385 47.839 76.105 47.7226 76.3038 47.5239C76.5026 47.3251 76.6189 47.0586 76.6295 46.7777V35.9307C76.6189 35.6498 76.5026 35.3833 76.3038 35.1845C76.105 34.9858 75.8385 34.8694 75.5577 34.8588H63.4673C63.183 34.8588 62.9104 34.9717 62.7094 35.1728C62.5083 35.3738 62.3954 35.6464 62.3954 35.9307V46.767C62.406 47.0479 62.5224 47.3144 62.7211 47.5131C62.9199 47.7119 63.1864 47.8282 63.4673 47.8388M63.4673 32.2971H75.5577C75.8419 32.2971 76.1146 32.1842 76.3156 31.9832C76.5166 31.7822 76.6295 31.5095 76.6295 31.2253V20.3648C76.6189 20.0839 76.5026 19.8174 76.3038 19.6187C76.105 19.4199 75.8385 19.3036 75.5577 19.293H63.4673C63.183 19.293 62.9104 19.4059 62.7094 19.6069C62.5083 19.8079 62.3954 20.0805 62.3954 20.3648V31.2012C62.4066 31.4818 62.5232 31.748 62.7218 31.9466C62.9204 32.1452 63.1866 32.2618 63.4673 32.273M80.3274 63.3377H92.4178C92.702 63.3377 92.9747 63.2248 93.1757 63.0238C93.3767 62.8228 93.4896 62.5501 93.4896 62.2659V51.4188C93.4896 51.1345 93.3767 50.8619 93.1757 50.6609C92.9747 50.4599 92.702 50.347 92.4178 50.347H80.3274C80.0431 50.347 79.7705 50.4599 79.5694 50.6609C79.3684 50.8619 79.2555 51.1345 79.2555 51.4188V62.2551C79.2661 62.536 79.3825 62.8025 79.5812 63.0013C79.78 63.2 80.0465 63.3164 80.3274 63.327"
+								fill="#23293F"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_9787_1542">
+								<rect width="137.196" height="137.196" fill="white" transform="translate(0.402344)" />
+							</clipPath>
+						</defs>
+					</svg>
+				</div>
+
+				<div class="partners-slider__slide-title">ОАО «Стройтехмед»</div>
+				<ul class="partners-slider__slide-desc">
+					<li class="partners-slider__slide-desc-item">Бесплатные консультации по&nbsp;безопасности</li>
+					<li class="partners-slider__slide-desc-item">Льготные путевки для&nbsp;сотрудников</li>
+				</ul>
+			</a>
+		</div>
+		<div class="partners-slider__slide swiper-slide">
+			<a class="partners-slider__slide-wrapper" href="#">
+				<div class="partners-slider__slide-image-container">
+					<svg class="partners-slider__slide-image" preserveAspectRatio="xMidYMid meet" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_9800_4139)">
+							<path
+								d="M89.4194 94.3225L110.245 42.874H96.44L82.1951 76.1199L72.0635 42.874H61.4496L50.5758 76.1199L42.904 60.9721L35.9638 82.2643L43.0112 94.3225H56.5968L66.4256 64.5065L75.8043 94.3225H89.4194ZM13.8785 76.6612H22.3595C24.6766 76.6937 26.9871 76.4042 29.2246 75.8011L31.4165 69.0511L37.5475 50.1894C37.0742 49.445 36.5362 48.7438 35.9397 48.0939C32.7992 44.614 28.1965 42.874 22.1317 42.874H0.804688V94.3225H13.8785V76.6612ZM25.1061 54.7099C26.3369 55.9461 26.9514 57.6003 26.9496 59.6725C26.9479 61.7447 26.4119 63.3998 25.3419 64.6378C24.1557 65.9991 21.9727 66.6788 18.7929 66.677H13.8785V52.8556H18.8143C21.778 52.8556 23.8752 53.4737 25.1061 54.7099ZM101.786 85.1073L105.749 75.1258H117.188L111.759 59.9833L118.549 42.874L138.001 94.3225H123.657L120.334 85.1073H101.786Z"
+								fill="#23293F"
+							/>
+						</g>
+						<defs>
+							<clipPath id="clip0_9800_4139">
+								<rect width="137.196" height="137.196" fill="white" transform="translate(0.402344)" />
+							</clipPath>
+						</defs>
+					</svg>
+				</div>
+
+				<div class="partners-slider__slide-title">АО «ПВА-ПРОТЕКТ»</div>
+				<ul class="partners-slider__slide-desc">
+					<li class="partners-slider__slide-desc-item">5% скидки на стройматериалы</li>
+					<li class="partners-slider__slide-desc-item">Подарки для детей сотрудников на&nbsp;новый год и дни рождений</li>
+				</ul>
+			</a>
+		</div>
+		<div class="partners-slider__slide swiper-slide">
+			<a class="partners-slider__slide-wrapper" href="#">
+				<div class="partners-slider__slide-image-container">
+					<svg class="partners-slider__slide-image" preserveAspectRatio="xMidYMid meet" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M34.197 84.4349C34.1949 86.9286 33.4535 89.3656 32.0666 91.4379C30.6797 93.5102 28.7095 95.1248 26.4051 96.0776C24.1007 97.0304 21.5655 97.2786 19.1201 96.7908C16.6747 96.3031 14.4287 95.1012 12.6662 93.3372C10.9037 91.5732 9.70379 89.3263 9.21809 86.8804C8.73239 84.4346 8.98274 81.8996 9.93749 79.596C10.8922 77.2924 12.5085 75.3236 14.582 73.9384C16.6556 72.5533 19.0932 71.814 21.5868 71.814H34.197V84.4349ZM40.5531 84.4349C40.5531 81.0905 41.8817 77.883 44.2465 75.5181C46.6114 73.1533 49.8189 71.8247 53.1633 71.8247C56.5078 71.8247 59.7152 73.1533 62.0801 75.5181C64.445 77.883 65.7736 81.0905 65.7736 84.4349V116.011C65.7736 119.356 64.445 122.563 62.0801 124.928C59.7152 127.293 56.5078 128.622 53.1633 128.622C49.8189 128.622 46.6114 127.293 44.2465 124.928C41.8817 122.563 40.5531 119.356 40.5531 116.011V84.4349ZM53.1633 33.7957C50.6697 33.7936 48.2327 33.0522 46.1604 31.6653C44.088 30.2783 42.4734 28.3082 41.5206 26.0037C40.5678 23.6993 40.3196 21.1642 40.8074 18.7187C41.2952 16.2733 42.497 14.0274 44.261 12.2649C46.025 10.5024 48.272 9.30242 50.7178 8.81672C53.1637 8.33102 55.6986 8.58137 58.0022 9.53612C60.3058 10.4909 62.2747 12.1072 63.6598 14.1807C65.045 16.2542 65.7843 18.6918 65.7843 21.1854V33.7957H53.1633ZM53.1633 40.1517C56.5078 40.1517 59.7152 41.4803 62.0801 43.8452C64.445 46.21 65.7736 49.4175 65.7736 52.762C65.7736 56.1064 64.445 59.3139 62.0801 61.6787C59.7152 64.0436 56.5078 65.3722 53.1633 65.3722H21.5868C18.2424 65.3722 15.0349 64.0436 12.67 61.6787C10.3051 59.3139 8.97656 56.1064 8.97656 52.762C8.97656 49.4175 10.3051 46.21 12.67 43.8452C15.0349 41.4803 18.2424 40.1517 21.5868 40.1517H53.1633ZM103.803 52.762C103.805 50.2683 104.546 47.8313 105.933 45.759C107.32 43.6867 109.29 42.0721 111.595 41.1193C113.899 40.1665 116.434 39.9183 118.88 40.406C121.325 40.8938 123.571 42.0957 125.333 43.8597C127.096 45.6237 128.296 47.8706 128.782 50.3165C129.267 52.7623 129.017 55.2973 128.062 57.6009C127.107 59.9045 125.491 61.8733 123.418 63.2584C121.344 64.6436 118.906 65.3829 116.413 65.3829H103.803V52.762ZM97.4465 52.762C97.4465 56.1064 96.118 59.3139 93.7531 61.6787C91.3882 64.0436 88.1807 65.3722 84.8363 65.3722C81.4919 65.3722 78.2844 64.0436 75.9195 61.6787C73.5546 59.3139 72.2261 56.1064 72.2261 52.762V21.1854C72.2261 17.841 73.5546 14.6335 75.9195 12.2687C78.2844 9.90377 81.4919 8.5752 84.8363 8.5752C88.1807 8.5752 91.3882 9.90377 93.7531 12.2687C96.118 14.6335 97.4465 17.841 97.4465 21.1854V52.762ZM84.8363 103.401C87.3299 103.403 89.7669 104.145 91.8393 105.532C93.9116 106.919 95.5262 108.889 96.479 111.193C97.4318 113.498 97.68 116.033 97.1922 118.478C96.7044 120.924 95.5026 123.17 93.7386 124.932C91.9746 126.695 89.7276 127.894 87.2818 128.38C84.8359 128.866 82.301 128.616 79.9974 127.661C77.6938 126.706 75.725 125.09 74.3398 123.016C72.9547 120.943 72.2153 118.505 72.2153 116.011V103.401H84.8363ZM84.8363 97.0452C81.4919 97.0452 78.2844 95.7166 75.9195 93.3517C73.5546 90.9868 72.2261 87.7794 72.2261 84.4349C72.2261 81.0905 73.5546 77.883 75.9195 75.5181C78.2844 73.1533 81.4919 71.8247 84.8363 71.8247H116.413C119.757 71.8247 122.965 73.1533 125.33 75.5181C127.694 77.883 129.023 81.0905 129.023 84.4349C129.023 87.7794 127.694 90.9868 125.33 93.3517C122.965 95.7166 119.757 97.0452 116.413 97.0452H84.8363Z"
+							fill="#23293F"
+						/>
+					</svg>
+				</div>
+
+				<div class="partners-slider__slide-title">ООО «Энергосбыт»</div>
+				<ul class="partners-slider__slide-desc">
+					<li class="partners-slider__slide-desc-item">Бесплатные семинары по&nbsp;строительной безопасности</li>
+				</ul>
+			</a>
+		</div>
+		<div class="partners-slider__slide swiper-slide">
+			<a class="partners-slider__slide-wrapper" href="#">
+				<div class="partners-slider__slide-image-container">
+					<svg class="partners-slider__slide-image" preserveAspectRatio="xMidYMid meet" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M73.2875 68.5978C73.2875 75.3815 71.2759 82.0129 67.507 87.6533C63.7382 93.2938 58.3814 97.69 52.1141 100.286C45.8468 102.882 38.9504 103.561 32.2971 102.238C25.6437 100.914 19.5322 97.6477 14.7354 92.8509C9.93861 88.0541 6.67195 81.9426 5.34851 75.2892C4.02508 68.6359 4.70431 61.7395 7.30032 55.4722C9.89633 49.2048 14.2925 43.8481 19.933 40.0793C25.5734 36.3104 32.2048 34.2988 38.9885 34.2988C48.0821 34.3088 56.8004 37.9256 63.2306 44.3557C69.6607 50.7859 73.2775 59.5042 73.2875 68.5978ZM99.0117 34.2988C95.9677 34.2988 90.2226 35.778 85.9781 45.6872C83.3253 51.8771 81.8622 60.0231 81.8622 68.5978C81.8622 77.1726 83.3253 85.3186 85.9781 91.5085C90.2226 101.418 95.9677 102.897 99.0117 102.897C102.056 102.897 107.801 101.418 112.045 91.5085C114.698 85.3186 116.161 77.1726 116.161 68.5978C116.161 60.0231 114.698 51.8771 112.045 45.6872C107.801 35.778 102.056 34.2988 99.0117 34.2988ZM129.023 34.2988C127.886 34.2988 126.796 34.7505 125.992 35.5546C125.188 36.3586 124.736 37.4491 124.736 38.5862V98.6095C124.736 99.7465 125.188 100.837 125.992 101.641C126.796 102.445 127.886 102.897 129.023 102.897C130.16 102.897 131.251 102.445 132.055 101.641C132.859 100.837 133.311 99.7465 133.311 98.6095V38.5862C133.311 37.4491 132.859 36.3586 132.055 35.5546C131.251 34.7505 130.16 34.2988 129.023 34.2988Z"
+							fill="#23293F"
+						/>
+					</svg>
+				</div>
+
+				<div class="partners-slider__slide-title">ПАО Витязь-С</div>
+				<ul class="partners-slider__slide-desc">
+					<li class="partners-slider__slide-desc-item">10% скидки на услуги</li>
+					<li class="partners-slider__slide-desc-item">Подарки на праздники и юбилеи</li>
+				</ul>
+			</a>
+		</div>
+	</div>
+</div>
+				</div>
+			</section>
+			<section class="index-feedback">
+				<div class="index-feedback__container">
+					<div class="index-feedback__titlebox">
+						<h2 class="index-feedback__title">Благодарности <span class="index-feedback__title--accent">от&nbsp;клиентов</span></h2>
+						<p class="index-feedback__subtitle">Каждый шаг в этом направлении способствует не только защите работников, но и повышению общей эффективности бизнеса.</p>
+					</div>
+					<ul class="timeline-list">
+						<li class="timeline-list__item">
+							<a class="timeline-list__item-wrapper" href="./assets/img/content/awards/example2.jpg" data-fancybox="index-awards">
+								<h3 class="timeline-list__item-title">Благодарственное письмо за&nbsp;удачное закрытие сделки</h3>
+								<div class="timeline-list__item-media">
+									<picture class="timeline-list__item-image-container">
+										<img class="timeline-list__item-image" src="./assets/img/content/awards/example2.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="timeline-list__item-label"><i class="index-feedback__item-label-icon timeline-list__item-label-icon icon-star"></i>ПАО «Роснефть»</div>
+								<time class="timeline-list__item-date">2024</time>
+							</a>
+						</li>
+						<li class="timeline-list__item">
+							<a class="timeline-list__item-wrapper" href="./assets/img/content/awards/example3.jpg" data-fancybox="index-awards">
+								<h3 class="timeline-list__item-title">За&nbsp;выдающиеся результаты по&nbsp;проекту «ЭКО-комплекс»</h3>
+								<div class="timeline-list__item-media">
+									<picture class="timeline-list__item-image-container">
+										<img class="timeline-list__item-image" src="./assets/img/content/awards/example3.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="timeline-list__item-label"><i class="index-feedback__item-label-icon timeline-list__item-label-icon icon-star"></i>ООО «Самолёт»</div>
+								<time class="timeline-list__item-date">2024</time>
+							</a>
+						</li>
+						<li class="timeline-list__item">
+							<a class="timeline-list__item-wrapper" href="./assets/img/content/awards/example4.jpg" data-fancybox="index-awards">
+								<h3 class="timeline-list__item-title">Почётная грамота от&nbsp;постоянного клиента</h3>
+								<div class="timeline-list__item-media">
+									<picture class="timeline-list__item-image-container">
+										<img class="timeline-list__item-image" src="./assets/img/content/awards/example4.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="timeline-list__item-label"><i class="index-feedback__item-label-icon timeline-list__item-label-icon icon-star"></i>ПАО «ПИК»</div>
+								<time class="timeline-list__item-date">2024</time>
+							</a>
+						</li>
+						<li class="timeline-list__item">
+							<a class="timeline-list__item-wrapper" href="./assets/img/content/awards/example1.jpg" data-fancybox="index-awards">
+								<h3 class="timeline-list__item-title">Благодарность президента России за инновации в сфере безопасности</h3>
+								<div class="timeline-list__item-media">
+									<picture class="timeline-list__item-image-container">
+										<img class="timeline-list__item-image" src="./assets/img/content/awards/example1.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="timeline-list__item-label"><i class="index-feedback__item-label-icon timeline-list__item-label-icon icon-star"></i>АО «Технождинамика»</div>
+								<time class="timeline-list__item-date">2024</time>
+							</a>
+						</li>
+						<li class="timeline-list__item">
+							<a class="timeline-list__item-wrapper" href="./assets/img/content/awards/example.jpg" data-fancybox="index-awards">
+								<h3 class="timeline-list__item-title">Chambers Europe 2017</h3>
+								<div class="timeline-list__item-media">
+									<picture class="timeline-list__item-image-container">
+										<img class="timeline-list__item-image" src="./assets/img/content/awards/example.jpg" alt="#" />
+									</picture>
+								</div>
+								<div class="timeline-list__item-label"><i class="index-feedback__item-label-icon timeline-list__item-label-icon icon-star"></i>Группа Компаний Новый Дон</div>
+								<time class="timeline-list__item-date">2024</time>
+							</a>
+						</li>
+					</ul>
+					<a class="index-feedback__button" href="docs.html">Все награды<i class="index-feedback__button-icon icon-arrow"></i></a>
+				</div>
+			</section>
+			<section class="index-supports">
+				<div class="index-supports__container">
+					<div class="index-supports__titlebox">
+						<div class="index-supports__card" data-parallax data-start="-200" data-end="50">
+							<picture class="index-supports__card-image-container">
+								<img class="index-supports__card-image" src="./assets/img/content/support.jpg" alt="#" />
+							</picture>
+							<p class="index-supports__card-desc">Служили с честью —&nbsp;помним с любовью !</p>
+						</div>
+						<div class="index-supports__title"><span class="index-supports__title-accent">СВО</span>ИХ Не&nbsp;БРОСАЕМ</div>
+						<div class="index-supports__title--mask"><span class="index-supports__title-accent">СВО</span>ИХ Не&nbsp;БРОСАЕМ</div>
+					</div>
+					<div class="index-supports__body">
+						<div class="index-supports__slider swiper">
+							<div class="index-supports__slider-wrapper swiper-wrapper">
+								<div class="index-supports__slide swiper-slide">
+									<a class="index-supports__slide-media" href="./assets/root/ConfusedTravolta.mp4" data-fancybox="index-supports">
+										<img class="index-supports__slide-image" src="./assets/img/content/support-cover.jpg" alt="#" />
+									</a>
+									<div class="index-supports__slide-button"><i class="index-supports__slide-button-icon icon-play"></i></div>
+								</div>
+								<div class="index-supports__slide swiper-slide">
+									<a class="index-supports__slide-media" href="./assets/root/ConfusedTravolta.mp4" data-fancybox="index-supports">
+										<img class="index-supports__slide-image" src="./assets/img/content/support-cover.jpg" alt="#" />
+									</a>
+									<div class="index-supports__slide-button"><i class="index-supports__slide-button-icon icon-play"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="index-supports__info">
+							<div class="index-supports__controls">
+								<div class="index-supports__controls-pagination"></div>
+								<div class="index-supports__navigation">
+									<button class="index-supports__navigation-button index-supports__navigation-button--prev swiper-button-prev"><i class="index-supports__navigation-button-icon icon-arrow"></i></button>
+									<button class="index-supports__navigation-button index-supports__navigation-button--next swiper-button-next"><i class="index-supports__navigation-button-icon icon-arrow"></i></button>
+								</div>
+							</div>
+							<div class="index-supports__desc">
+								<p class="index-supports__text">Ассоциация активно поддерживает ветеранов СВО и жителей новых регионов России, предоставляя им&nbsp;необходимые услуги и&nbsp;помощь.</p>
+								<a class="index-supports__button" href="blog.html">
+									<span>Проекты помощи</span>
+									<i class="index-supports__button-icon icon-arrow"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="index-news">
+				<div class="index-news__container">
+					<div class="news-slider">
+	<div class="news-slider__info">
+		<div class="news-slider__titlebox">
+			<h2 class="news-slider__title">новости</h2>
+			<p class="news-slider__subtitle"></p>
+			<a class="news-slider__link" href="blog.html">Пресс-центр<i class="news-slider__link-icon icon-arrow"></i></a>
+		</div>
+		<div class="news-slider__nav">
+			<button class="news-slider__nav-button news-slider__nav-button--prev swiper-button-prev"><i class="news-slider__nav-button-icon icon-arrow"></i></button>
+			<button class="news-slider__nav-button news-slider__nav-button--next swiper-button-next"><i class="news-slider__nav-button-icon icon-arrow"></i></button>
+		</div>
+	</div>
+	<div class="news-slider__slider swiper">
+		<div class="news-slider__slider-wrapper swiper-wrapper">
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Громкий дело: банкротство известного предпринимателя</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example1.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Влияние искусственного интеллекта на рынок труда</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Громкий дело: банкротство известного предпринимателя</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example1.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Влияние искусственного интеллекта на рынок труда</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Громкий дело: банкротство известного предпринимателя</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example1.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Влияние искусственного интеллекта на рынок труда</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+				</div>
+			</section>
+			<section class="index-invite">
+				<div class="index-invite__container">
+					<div class="index-invite__wrapper">
+						<picture class="index-invite__image-container">
+							<img class="index-invite__image" src="./assets/img/content/team/portret.png" alt="#" data-parallax />
+						</picture>
+						<div class="index-invite__titlebox">
+							<h2 class="index-invite__title">Станьте членом ассоциации по&nbsp;строительной безопасности</h2>
+							<p class="index-invite__desc">Присоединяйтесь к нашей ассоциации и станьте частью сообщества, где ваши идеи и вклад имеют значение. Мы ждем вас!</p>
+							<button class="index-invite__button">
+								<span>Подать заявку</span>
+								<i class="index-invite__button-icon icon-arrow"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__body">
+			<a class="footer__logo" href="index.html">
+				<picture class="footer__logo-container">
+					<img class="footer__logo-image" src="./assets/icons/logo/logo-full.svg" alt="Стройбезопасность" />
+				</picture>
+			</a>
+			<div class="footer__links">
+				<a class="footer__links-item footer__links-item--tel" href="tel:+7(846)243-90-90">8 (846) 243-90-90</a>
+				<a class="footer__links-item footer__links-item--mail" href="mailto:hello@stroiguard.ru">hello@stroiguard.ru</a>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav-list">
+					<a class="footer__nav-item" href="index.html">Главная</a>
+					<a class="footer__nav-item" href="fields.html">Деятельность</a>
+					<a class="footer__nav-item" href="about.html">Об ассоциации</a>
+					<a class="footer__nav-item" href="registry.html">Реестр участников</a>
+				</div>
+				<div class="footer__nav-list">
+					<a class="footer__nav-item" href="docs.html">Документы</a>
+					<a class="footer__nav-item" href="faq.html">Помощь</a>
+					<a class="footer__nav-item" href="blog.html">Пресс-центр</a>
+					<a class="footer__nav-item" href="contacts.html">Контакты</a>
+				</div>
+			</nav>
+			<form class="footer__form" action="" method="post">
+				<p class="footer__form-title">Подпишитесь на обновления, чтобы всегда быть в&nbsp;курсе новостей ассоциации</p>
+				<div class="footer__form-body">
+					<div class="footer__form-inputbox">
+						<label class="footer__form-label" for="footer-mail">Электронная почта</label>
+						<input id="footer-mail" class="footer__form-input" type="email" placeholder="example@yandex.ru" required />
+					</div>
+					<button type="submit" class="footer__form-button">
+						<span>Подписаться</span>
+						<i class="footer__form-button-icon icon-arrow"></i>
+					</button>
+				</div>
+			</form>
+			<div class="footer__socials">
+				<p class="footer__socials-title">Следите за нами в соцсетях:</p>
+				<div class="footer__socials-links">
+					<a class="footer__socials-item footer__socials-item--telegram" href="#"><i class="footer__socials-item-icon icon-telegram"></i></a>
+					<a class="footer__socials-item footer__socials-item--vk" href="#"><i class="footer__socials-item-icon icon-vk"></i></a>
+				</div>
+			</div>
+			<div class="footer__privacy">
+				<p class="footer__privacy-copyright">2025 &copy; Стройбезопасность. Все права защищены</p>
+				<button class="footer__privacy-button" data-modal="privacy">Политика конфиденциальности</button>
+			</div>
+		</div>
+	</div>
+	<div class="footer__label">
+		<div class="footer__label-container">
+			<a class="footer__label-wrapper" href="https://intheplace.ru">
+				<picture class="footer__label-image-container">
+					<img class="footer__label-image" src="assets/root/theplace.svg" alt="ThePlace" />
+				</picture>
+				<div class="footer__label-desc">— разработка и поддержка сайта</div>
+			</a>
+		</div>
+	</div>
+</footer>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=466c57d0-00c9-424e-9e19-9ba284de093e&lang=ru_RU" type="text/javascript"></script>
+<script src="./js/main.min.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./assets/fonts/icon-font/style.css">
+	<title>Направления деятельности - Ассоциация Стройбезопасность</title>
+</head>
+
+	<body>
+		<header class="header ">
+	<div class="header__container">
+		<a href="index.html" class="header__logo">
+			<picture class="header__logo-container">
+				<img class="header__logo-image" src="./assets/icons/logo/logo-main.svg" alt="Стройбезопасность" />
+			</picture>
+		</a>
+		<div class="header__controls">
+			<a class="header__controls-item header__controls-item--tel" href="contacts.html">8 800 555-55-35</a>
+			<button class="header__controls-item header__controls-item--connection" data-modal="connection">СВЯЗАТЬСЯ С НАМИ</button>
+			<button class="header__controls-item header__controls-item--burger" data-modal="menu">МЕНЮ</button>
+		</div>
+	</div>
+</header>
+<dialog id="modal-privacy" class="modal-privacy hide-scrollbar">
+	<button class="modal-privacy__button" data-close-button aria-label="Закрыть окно"><i class="modal-privacy__close-btn-icon icon-cross"></i></button>
+	<div class="modal-privacy__container">
+		<div class="modal-privacy__titlebox">
+			<div class="modal-privacy__title">Политика конфиденциальности</div>
+			<time class="modal-privacy__date" datetime="2025-02-27">Последнее обновление: 27.02.25</time>
+		</div>
+		<ul class="modal-privacy__list">
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Презентация</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Наши обязательства</li>
+					<li class="modal-privacy__subitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Обязательства пользователей</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Сбор вашей информации</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Личные данные</li>
+					<li class="modal-privacy__subitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</li>
+				</ul>
+			</li>
+			<li class="modal-privacy__item">
+				<p class="modal-privacy__item-title">Использовать вашу информацию</p>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Предоставление услуг</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+				</ul>
+				<ul class="modal-privacy__subitem">
+					<li class="modal-privacy__subitem-title">Консультации</li>
+					<li class="modal-privacy__subitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Использовать вашу информацию</p>
+						<p class="modal-privacy__subsubitem-text">В Инспекции имущества Канады мы обязуемся защищать вашу личную информацию и уважать вашу конфиденциальность. Настоящая Политика конфиденциальности объясняет, как мы собираем, используем, раскрываем и защищаем вашу информацию, когда вы используете наши услуги по проверке имущества.</p>
+						<p class="modal-privacy__subsubitem-text">Мы можем собирать личную информацию, такую как ваше имя, адрес электронной почты, номер телефона, адрес собственности, а также другую соответствующую информацию, которую вы добровольно предоставляете нам при выборе использования наших услуг по проверке собственности.</p>
+					</li>
+					<li class="modal-privacy__subsubitem">
+						<p class="modal-privacy__subsubitem-title">Ремонт</p>
+						<p class="modal-privacy__subsubitem-text">Мы используем вашу информацию для предоставления услуг по проверке имущества, ответа на ваши запросы и управления нашими договорными отношениями с вами.</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</dialog>
+
+<dialog id="modal-menu" class="modal-menu">
+	<button class="modal-menu__button" data-close-button aria-label="Закрыть меню">закрыть</button>
+	<div class="modal-menu__container">
+		<picture class="modal-menu__logo-container">
+			<img class="modal-menu__logo" src="./assets/icons/logo/logo-icon.svg" alt="Логотип" />
+		</picture>
+		<nav class="modal-menu__nav">
+			<a class="modal-menu__nav-item " href="index.html">НА ГЛАВНУЮ</a>
+			<a class="modal-menu__nav-item " href="about.html">АССОЦИАЦИЯ</a>
+			<a class="modal-menu__nav-item " href="faq.html">ВОПРОСЫ</a>
+			<a class="modal-menu__nav-item current" href="fields.html">ДЕЯТЕЛЬНОСТЬ</a>
+			<a class="modal-menu__nav-item " href="docs.html">ДОКУМЕНТЫ</a>
+			<a class="modal-menu__nav-item " href="blog.html">ПРЕСС-ЦЕНТР</a>
+			<a class="modal-menu__nav-item " href="registry.html">РЕЕСТР</a>
+			<a class="modal-menu__nav-item " href="contacts.html">КОНТАКТЫ</a>
+		</nav>
+		<div class="modal-menu__info">
+			<div class="modal-menu__info-border"></div>
+			<div class="modal-menu__info-wrapper">
+				<div class="modal-menu__info-hero">
+					<ul class="modal-menu__info-desc">
+						<li class="modal-menu__desc-item">Ассоциация</li>
+						<li class="modal-menu__desc-item">Негосударственных</li>
+						<li class="modal-menu__desc-item">Структур&nbsp;Безопасности</li>
+					</ul>
+					<button class="modal-menu__info-button" data-modal="">
+						<span>Стать частью ассоциации</span>
+						<i class="modal-menu__info-button-icon icon-arrow"></i>
+					</button>
+				</div>
+				<div class="modal-menu__info-connection">
+					<a class="modal-menu__info-link modal-menu__info-link--tel" href="tel:8(846)243-90-90">8 (846) 243-90-90</a>
+					<a class="modal-menu__info-link modal-menu__info-link--mail" href="mailto:hello@stroiguard.ru">hello@stroiguard.ru</a>
+					<div class="modal-menu__info-socials">
+						<a class="modal-menu__info-socials-item modal-menu__info-socials-item--vk" href=""><i class="modal-menu__info-socials-item-icon icon-vk"></i></a>
+						<a class="modal-menu__info-socials-item modal-menu__info-socials-item--telegram" href=""><i class="modal-menu__info-socials-item-icon icon-telegram"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-menu__copyright">2025 &copy; Стройбезопасность. Все права защищены</div>
+	</div>
+</dialog>
+
+
+		<main>
+			<section class="fields-hero">
+				<div class="fields-hero__container">
+					<picture class="fields-hero__image-container">
+						<img class="fields-hero__image" src="./assets/img/content/backgrounds/fields-hero.jpg" alt="#" />
+					</picture>
+					<div class="fields-hero__titlebox">
+						<h1 class="fields-hero__title">Направления деятельности</h1>
+						<p class="fields-hero__subtitle">Ассоциация стробезопасности занимается разработкой стандартов, обучением и&nbsp;поддержкой своих участников, а также популяризацией безопасных практик в&nbsp;этой области</p>
+					</div>
+				</div>
+			</section>
+			<section class="fields-news">
+				<div class="fields-news__container"><div class="news-slider">
+	<div class="news-slider__info">
+		<div class="news-slider__titlebox">
+			<h2 class="news-slider__title">Добрые дела</h2>
+			<p class="news-slider__subtitle">Pro bono – это работа, выполняемая безвозмездно в&nbsp;интересах общества. Ассоциация стройбезопасности активно поддерживает такие инициативы, помогая улучшить безопасность на строительных объектах.</p>
+			<a class="news-slider__link" href="blog.html">Все проекты<i class="news-slider__link-icon icon-arrow"></i></a>
+		</div>
+		<div class="news-slider__nav">
+			<button class="news-slider__nav-button news-slider__nav-button--prev swiper-button-prev"><i class="news-slider__nav-button-icon icon-arrow"></i></button>
+			<button class="news-slider__nav-button news-slider__nav-button--next swiper-button-next"><i class="news-slider__nav-button-icon icon-arrow"></i></button>
+		</div>
+	</div>
+	<div class="news-slider__slider swiper">
+		<div class="news-slider__slider-wrapper swiper-wrapper">
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Громкий дело: банкротство известного предпринимателя</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example1.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Влияние искусственного интеллекта на рынок труда</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Громкий дело: банкротство известного предпринимателя</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example1.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Влияние искусственного интеллекта на рынок труда</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Громкий дело: банкротство известного предпринимателя</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+			<div class="news-slider__slide swiper-slide">
+				<picture class="news-slider__slide-image-container">
+					<img class="news-slider__slide-image" src="./assets/img/content/articles/example1.jpg" alt="#" />
+				</picture>
+				<div class="news-slider__slide-titlebox">
+					<p class="news-slider__slide-title">Влияние искусственного интеллекта на рынок труда</p>
+					<p class="news-slider__slide-subtitle">В резонансном деле один из ведущих бизнесменов страны объявил себя банкротом, вызвав общественный резонанс. Судебный процесс привлёк внимание СМИ: эксперты обсуждают, как этот случай может повлиять на бизнес-среду и изменить подход к решению долговых проблем.</p>
+				</div>
+				<a class="news-slider__slide-link" href="article.html">ЧИТАТЬ<i class="news-slider__slide-link-icon icon-arrow"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+			</section>
+			<section class="fields-slider">
+				<div class="fields-slider__container">
+					<div class="fields-slider__slider swiper">
+						<div class="fields-slider__slider-wrapper swiper-wrapper">
+							<div class="fields-slider__slide swiper-slide" data-hash="control">
+								<picture class="fields-slider__slide-image-container">
+									<img class="fields-slider__slide-image" src="./assets/img/content/fields/control.jpg" alt="#" />
+								</picture>
+								<div class="fields-slider__slide-wrapper">
+									<div class="fields-slider__slide-content">
+										<h2 class="fields-slider__slide-title" data-swiper-parallax="-300" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Организация контроля</h2>
+										<p class="fields-slider__slide-desc" data-swiper-parallax="-400" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Всесторонний мониторинг финансовых процессов вашей компании. Мы помогаем выявлять риски и&nbsp;оптимизировать управление ресурсами, чтобы обеспечить стабильность и рост вашего бизнеса.</p>
+										<div class="fields-slider__slide-button"><a class="button " href="article.html" data-swiper-parallax-scale="0.5">
+	<span class="button-content">
+		<span class="button-title">ОТКРЫТЬ</span>
+		<span class="button-text">РАЗДЕЛ</span>
+	</span>
+	<span class="button-icon">
+		<span></span>
+	</span>
+</a>
+</div>
+										<div class="fields-slider__slide-divider"></div>
+									</div>
+								</div>
+							</div>
+							<div class="fields-slider__slide swiper-slide" data-hash="laws">
+								<picture class="fields-slider__slide-image-container">
+									<img class="fields-slider__slide-image" src="./assets/img/content/fields/laws.jpg" alt="#" />
+								</picture>
+								<div class="fields-slider__slide-wrapper">
+									<div class="fields-slider__slide-content">
+										<h2 class="fields-slider__slide-title" data-swiper-parallax="-300" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Нормативно-правовое сопровождение</h2>
+										<p class="fields-slider__slide-desc" data-swiper-parallax="-400" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Комплекс услуг, направленных на обеспечение соответствия деятельности компании действующему законодательству. Мы помогаем в разработке и внедрении внутренних регламентов, а&nbsp;также консультируем по вопросам соблюдения норм и правил, что позволяет избежать юридических рисков и повысить эффективность бизнеса.</p>
+										<div class="fields-slider__slide-button"><a class="button " href="article.html" data-swiper-parallax-scale="0.5">
+	<span class="button-content">
+		<span class="button-title">ОТКРЫТЬ</span>
+		<span class="button-text">РАЗДЕЛ</span>
+	</span>
+	<span class="button-icon">
+		<span></span>
+	</span>
+</a>
+</div>
+										<div class="fields-slider__slide-divider"></div>
+									</div>
+								</div>
+							</div>
+							<div class="fields-slider__slide swiper-slide" data-hash="corruption">
+								<picture class="fields-slider__slide-image-container">
+									<img class="fields-slider__slide-image" src="./assets/img/content/fields/corruption.jpg" alt="#" />
+								</picture>
+								<div class="fields-slider__slide-wrapper">
+									<div class="fields-slider__slide-content">
+										<h2 class="fields-slider__slide-title" data-swiper-parallax="-300" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Противодействие коррупции</h2>
+										<p class="fields-slider__slide-desc" data-swiper-parallax="-400" data-swiper-parallax-duration="1200" data-swiper-parallax-opacity="0">Специалисты компании успешно инициировали процедуру банкротства. Суд признал требования кредитора необоснованными, и задолженность была полностью списана</p>
+										<div class="fields-slider__slide-button"><a class="button " href="article.html" data-swiper-parallax-scale="0.5">
+	<span class="button-content">
+		<span class="button-title">ОТКРЫТЬ</span>
+		<span class="button-text">РАЗДЕЛ</span>
+	</span>
+	<span class="button-icon">
+		<span></span>
+	</span>
+</a>
+</div>
+										<div class="fields-slider__slide-divider"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fields-slider__pagination"></div>
+				</div>
+			</section>
+            <section class="fields-connection"><div class="connection-block">
+	<div class="connection-block__container">
+		<div class="connection-block__wrapper">
+            <h2 class="connection-block__title">Остались вопросы?</h2>
+            <p class="connection-block__desc">Наши технические специалисты всегда готовы помочь с&nbsp;решением любых проблем наших клиентов</p>
+            <button class="connection-block__button" data-modal="question">
+                <span>Связаться с нами</span>
+                <i class="connection-block__button-icon icon-arrow"></i>
+            </button>
+        </div>
+	</div>
+</div>
+</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__body">
+			<a class="footer__logo" href="index.html">
+				<picture class="footer__logo-container">
+					<img class="footer__logo-image" src="./assets/icons/logo/logo-full.svg" alt="Стройбезопасность" />
+				</picture>
+			</a>
+			<div class="footer__links">
+				<a class="footer__links-item footer__links-item--tel" href="tel:+7(846)243-90-90">8 (846) 243-90-90</a>
+				<a class="footer__links-item footer__links-item--mail" href="mailto:hello@stroiguard.ru">hello@stroiguard.ru</a>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav-list">
+					<a class="footer__nav-item" href="index.html">Главная</a>
+					<a class="footer__nav-item" href="fields.html">Деятельность</a>
+					<a class="footer__nav-item" href="about.html">Об ассоциации</a>
+					<a class="footer__nav-item" href="registry.html">Реестр участников</a>
+				</div>
+				<div class="footer__nav-list">
+					<a class="footer__nav-item" href="docs.html">Документы</a>
+					<a class="footer__nav-item" href="faq.html">Помощь</a>
+					<a class="footer__nav-item" href="blog.html">Пресс-центр</a>
+					<a class="footer__nav-item" href="contacts.html">Контакты</a>
+				</div>
+			</nav>
+			<form class="footer__form" action="" method="post">
+				<p class="footer__form-title">Подпишитесь на обновления, чтобы всегда быть в&nbsp;курсе новостей ассоциации</p>
+				<div class="footer__form-body">
+					<div class="footer__form-inputbox">
+						<label class="footer__form-label" for="footer-mail">Электронная почта</label>
+						<input id="footer-mail" class="footer__form-input" type="email" placeholder="example@yandex.ru" required />
+					</div>
+					<button type="submit" class="footer__form-button">
+						<span>Подписаться</span>
+						<i class="footer__form-button-icon icon-arrow"></i>
+					</button>
+				</div>
+			</form>
+			<div class="footer__socials">
+				<p class="footer__socials-title">Следите за нами в соцсетях:</p>
+				<div class="footer__socials-links">
+					<a class="footer__socials-item footer__socials-item--telegram" href="#"><i class="footer__socials-item-icon icon-telegram"></i></a>
+					<a class="footer__socials-item footer__socials-item--vk" href="#"><i class="footer__socials-item-icon icon-vk"></i></a>
+				</div>
+			</div>
+			<div class="footer__privacy">
+				<p class="footer__privacy-copyright">2025 &copy; Стройбезопасность. Все права защищены</p>
+				<button class="footer__privacy-button" data-modal="privacy">Политика конфиденциальности</button>
+			</div>
+		</div>
+	</div>
+	<div class="footer__label">
+		<div class="footer__label-container">
+			<a class="footer__label-wrapper" href="https://intheplace.ru">
+				<picture class="footer__label-image-container">
+					<img class="footer__label-image" src="assets/root/theplace.svg" alt="ThePlace" />
+				</picture>
+				<div class="footer__label-desc">— разработка и поддержка сайта</div>
+			</a>
+		</div>
+	</div>
+</footer>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=466c57d0-00c9-424e-9e19-9ba284de093e&lang=ru_RU" type="text/javascript"></script>
+<script src="./js/main.min.js"></script>
+
+	</body>
+</html>
