@@ -60,6 +60,7 @@
 
 	window.initModal = initModal;
 
-	initModal("#modal-privacy", "privacy", "data-close-button");
 	initModal("#modal-menu", "menu", "data-close-button");
+	initModal("#modal-privacy", "privacy", "data-close-button");
+	initModal("#modal-application", "application", "data-close-button");
 })();

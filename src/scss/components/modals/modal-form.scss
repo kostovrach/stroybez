@@ -1,0 +1,48 @@
+@use "../../utils/abstracts" as *;
+
+.modal-form {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: auto;
+	max-width: rem(540);
+	height: 100lvh;
+	overflow-y: auto;
+	pointer-events: none;
+	color: $main-color;
+	background-color: $c-23293F;
+	translate: 100% 0;
+	transition: translate $duration;
+	&.anim {
+		translate: 0 0;
+		pointer-events: auto;
+		&::backdrop {
+			background-color: rgba($c-000000, 0.5);
+			backdrop-filter: blur(5px);
+		}
+	}
+	&::backdrop {
+		background-color: transparent;
+		transition: all $duration;
+	}
+	&__button {
+		cursor: pointer;
+		align-self: flex-end;
+		font-size: rem(24);
+		transition: rotate $duration;
+		@media (pointer: fine) {
+			&:hover {
+				rotate: 90deg;
+			}
+		}
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(32);
+		font-size: rem(18);
+		min-height: 100lvh;
+		padding: rem(32) rem(64);
+	}
+}
