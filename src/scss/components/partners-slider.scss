@@ -2,6 +2,9 @@
 
 .partners-slider {
     overflow: visible;
+	@media (pointer: coarse) {
+		pointer-events: none;
+	}
 	&__wrapper {
         width: fit-content;
 	}

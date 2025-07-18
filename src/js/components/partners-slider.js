@@ -60,7 +60,7 @@
 		duplicateSlides();
 
 		const clientsSliderParams = {
-			spaceBetween: 16,
+			spaceBetween: 8,
 			slidesPerView: "auto",
 			allowTouchMove: false,
 			simulateTouch: false,
@@ -76,6 +76,11 @@
 			freeMode: {
 				enabled: true,
 				momentum: false,
+			},
+			breakpoints: {
+				540: {
+					spaceBetween: 16,
+				},
 			},
 			on: {
 				init(swiperInstance) {

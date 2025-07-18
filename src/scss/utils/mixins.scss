@@ -182,14 +182,14 @@
 		}
 	}
 }
-@mixin button-main($gap: rem(16), $font-size: lineScale(18, 16, 480, 1792), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF) {
+@mixin button-main($gap: rem(16), $font-size: lineScale(18, 16, 480, 1792), $padding: rem(18) rem(32), $border-color: $c-23293F, $hover-bg: $c-FA1943, $hover-color: $c-FFFFFF, $width: fit-content) {
 	cursor: pointer;
 	box-sizing: border-box;
 	position: relative;
 	display: flex;
 	align-items: center;
 	gap: $gap;
-	width: fit-content;
+	width: $width;
 	white-space: nowrap;
 	border: rem(2) solid $border-color;
 	font-size: $font-size;

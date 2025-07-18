@@ -10,7 +10,7 @@
 	color: $c-FFFFFF;
 	background-color: $c-23293F;
 	pointer-events: none;
-	translate: 100% 0;
+	translate: 0 -100%;
 	transition: translate $duration;
 	&::backdrop {
 		background-color: rgba($c-000000, 0);

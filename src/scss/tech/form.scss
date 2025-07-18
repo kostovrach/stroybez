@@ -98,6 +98,7 @@
 		}
 	}
 	&:has(input:checked) {
+		border-color: $c-FA1943;
 		background-color: $c-FA1943; // <-----
 		&::before,
 		&::after {

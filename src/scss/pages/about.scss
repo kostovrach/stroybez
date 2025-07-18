@@ -1,0 +1,365 @@
+@use "../utils/abstracts" as *;
+
+.about-hero {
+	@include block-padding($break: rem(128));
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(96);
+		@include content-width();
+	}
+	&__titlebox {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -4rem;
+			width: 100%;
+			height: rem(8);
+			background-color: $c-FA1943;
+		}
+	}
+	&__title {
+		@include block-title();
+	}
+	&__tag {
+		@include block-tag();
+	}
+	&__hint {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+	&__anim {
+		position: relative;
+		width: rem(160);
+		height: rem(160);
+		aspect-ratio: 1/1;
+		@include flex-center();
+		&-icon {
+			position: relative;
+			width: rem(24);
+			height: rem(36);
+			border-radius: rem(16);
+			border: rem(1.5) solid $c-23293F;
+			animation: mouse-translate 2s $spring infinite;
+			&::before {
+				content: "";
+				position: absolute;
+				top: rem(9);
+				left: 50%;
+				height: rem(6);
+				width: rem(1.5);
+				translate: -50% 0;
+				background-color: $c-23293F;
+			}
+			@keyframes mouse-translate {
+				0% {
+					translate: 0 -20%;
+				}
+				50% {
+					translate: 0 10%;
+				}
+				100% {
+					translate: 0 -20%;
+				}
+			}
+		}
+		&-overlay-container {
+			position: absolute;
+			inset: 0;
+		}
+		&-overlay {
+			width: 100%;
+			height: 100%;
+			animation: overlay-spin 12s linear infinite;
+			@keyframes overlay-spin {
+				from {
+					rotate: 0;
+				}
+				to {
+					rotate: 360deg;
+				}
+			}
+		}
+	}
+	&__desc {
+		max-width: 30ch;
+		font-size: lineScale(20, 18, 480, 1792);
+		line-height: 150%;
+	}
+	&__image-container {
+		position: relative;
+		width: 100%;
+		height: rem(640);
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.about-advant {
+	@include block-padding();
+	&__container {
+		position: relative;
+		display: grid;
+		grid-template-columns: 20% auto 20%;
+		gap: rem(32);
+		@include content-width();
+	}
+	&__tag {
+		@include block-tag();
+	}
+	&__body {
+		position: relative;
+		padding-top: rem(64);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: rem(8);
+			background-color: $c-FA1943;
+		}
+	}
+	&__title {
+		font-size: lineScale(40, 24, 480, 1792);
+		line-height: 1;
+		font-weight: $fw-m;
+	}
+	&__desc {
+		font-size: lineScale(18, 14, 480, 1792);
+		line-height: 150%;
+		font-weight: $fw-m;
+		margin-top: rem(32);
+	}
+}
+.about-team {
+	@include block-padding();
+	&__container {
+		@include content-width();
+	}
+	&__titlebox {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: rem(32);
+	}
+	&__title {
+		max-width: 15ch;
+		@include block-title();
+	}
+	&__list {
+        display: flex;
+        flex-direction: column;
+		margin-top: rem(64);
+	}
+	&__item {
+		width: 100%;
+		&:nth-child(odd) {
+			.about-team__item-wrapper {
+				flex-direction: row-reverse;
+				text-align: right;
+			}
+			.about-team__item-content {
+				align-items: flex-end;
+			}
+			.about-team__item-connection {
+				align-items: flex-end;
+			}
+		}
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			gap: rem(96);
+			overflow: visible;
+		}
+		&-media {
+			position: relative;
+			max-width: rem(450);
+			max-height: rem(450);
+			aspect-ratio: 1/1;
+			border-radius: 0 0 rem(256) rem(256);
+		}
+		&-background-container {
+			width: 100%;
+			height: 100%;
+			border-radius: 0 0 rem(256) rem(256);
+			overflow: hidden;
+		}
+		&-background {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-image-container {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			border-radius: 0 0 rem(256) rem(256);
+			overflow: hidden;
+		}
+		&-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			translate: 0 10%;
+		}
+		&-content {
+			display: flex;
+			flex-direction: column;
+		}
+		&-post {
+			font-size: lineScale(18, 16, 480, 1792);
+			line-height: 1;
+			font-weight: $fw-m;
+			opacity: 0.5;
+		}
+		&-name {
+			font-size: lineScale(40, 24, 480, 1792);
+			line-height: 120%;
+			font-weight: $fw-m;
+			margin-top: rem(16);
+		}
+		&-connection {
+			display: flex;
+			flex-direction: column;
+			gap: rem(8);
+			font-size: lineScale(18, 16, 480, 1792);
+			line-height: 1;
+			font-weight: $fw-m;
+			margin-top: rem(32);
+		}
+		&-link {
+			@include hover-underline($color: $c-23293F);
+		}
+	}
+}
+.about-partners {
+	@include block-padding();
+	&__container {
+		@include content-width();
+	}
+	&__titlebox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: rem(64);
+	}
+	&__title {
+		@include block-tag();
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		gap: rem(8);
+		font-weight: $fw-m;
+		@include hover-underline();
+		@include icon-hover();
+	}
+}
+@media (max-width: 1024px) {
+	.about-advant {
+		&__container {
+			grid-template-columns: repeat(2, auto);
+		}
+	}
+    .about-team {
+        &__list {
+            gap: rem(64);
+        }
+    }
+}
+@media (max-width: 768px) {
+	.about-hero {
+		&__titlebox {
+			flex-direction: column-reverse;
+			gap: rem(32);
+		}
+	}
+	.about-team {
+        &__list {
+            gap: rem(96);
+        }
+		&__item {
+			&-wrapper {
+                gap: rem(32);
+			}
+            &-media {
+                max-width: rem(256);
+                max-height: rem(256);
+            }
+		}
+	}
+	.about-advant {
+		&__container {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.about-connection {
+		.connection-block {
+			padding: 0;
+		}
+	}
+}
+@media (max-width: 540px) {
+	.about-hero {
+		&__hint {
+			position: relative;
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: initial;
+		}
+		&__anim {
+			position: absolute;
+			bottom: -5rem;
+			right: 0;
+			width: rem(96);
+			height: rem(96);
+			opacity: 0.5;
+		}
+		&__image-container {
+			position: relative;
+		}
+		&__image {
+			width: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			translate: -50% -50%;
+		}
+	}
+	.about-team {
+		&__item {
+			&:nth-child(odd) {
+				.about-team__item-wrapper {
+					flex-direction: column;
+					text-align: left;
+				}
+				.about-team__item-content {
+					align-items: initial;
+				}
+				.about-team__item-connection {
+					align-items: initial;
+				}
+			}
+			&-wrapper {
+				flex-direction: column;
+			}
+		}
+	}
+	.about-partners {
+		&__titlebox {
+			flex-direction: column;
+			align-items: initial;
+			gap: rem(32);
+		}
+	}
+}

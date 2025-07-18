@@ -28,7 +28,9 @@
 	}
 	&__button {
 		cursor: pointer;
-		align-self: flex-end;
+		position: absolute;
+		top: rem(32);
+		right: rem(32);
 		font-size: rem(24);
 		transition: rotate $duration;
 		@media (pointer: fine) {
@@ -40,9 +42,54 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: rem(32);
 		font-size: rem(18);
 		min-height: 100lvh;
-		padding: rem(32) rem(64);
+		padding: rem(96) rem(64) rem(32);
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: lineScale(40, 30, 480, 1792);
+		line-height: 120%;
+		font-weight: $fw-s;
+	}
+	&__form {
+		.input__inputbox {
+			margin-top: rem(16);
+			textarea {
+				resize: none;
+				width: 100%;
+				height: rem(160);
+			}
+		}
+		&-agreement {
+			display: flex;
+			align-items: center;
+			gap: rem(16);
+			margin-top: rem(32);
+			&-label {
+				color: rgba($c-C0CED7, 0.8);
+				font-size: rem(16);
+				line-height: 120%;
+				&-button {
+					cursor: pointer;
+					color: $c-FFFFFF;
+					text-decoration: underline;
+				}
+			}
+		}
+		&-button {
+			margin-top: rem(96);
+			@include flex-center();
+			@include button-main($border-color: $c-FA1943, $width: 100%);
+		}
+	}
+}
+@media (max-width: 540px){
+	.modal-form {
+		&__container {
+			padding: rem(96) rem(16);
+		}
 	}
 }

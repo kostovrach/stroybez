@@ -3,8 +3,6 @@
 .registry-hero {
 	min-height: 100lvh;
 	padding: rem(128) rem(32);
-	&__container {
-	}
 	&__runline {
 		width: 100%;
 		display: flex;
@@ -16,6 +14,7 @@
 			font-size: 13vw;
 			line-height: 1;
 			font-weight: $fw-b;
+			will-change: translate;
 			animation: runline 10s linear infinite;
 			&::before {
 				content: "";
@@ -28,10 +27,10 @@
 			}
 		}
 		@keyframes runline {
-			0% {
+			from {
 				translate: 0 0;
 			}
-			100% {
+			to {
 				translate: -100% 0;
 			}
 		}
